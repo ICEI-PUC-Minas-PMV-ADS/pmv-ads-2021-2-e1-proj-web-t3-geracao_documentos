@@ -1,23 +1,24 @@
-# TÍTULO DO PROJETO
+#  Geração de Documentos
 
-`CURSO`
+`Análise e Desenvolvimento de Sistemas `
 
-`DISCIPLINA`
+`Desenvolvimento Web Front-end`
 
-`SEMESTRE`
+`Primeiro Semestre`
 
-Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo desenvolvido.
+O objetivo geral é, o desenvolvimento de uma plataforma que capacite o usuário a preencher documentos de maneira simplificada e ágil.
 
 ## Integrantes
 
-* Nome completo do aluno 1
-* Nome completo do aluno 2
-* Nome completo do aluno 3
-* Nome completo do aluno 4
+*  Ana Paula Buchholz
+* Andressa Cristina Lemes 
+* Douglas da Costa Santos 
+* Filipe Marques Martins Pascoal 
+* Raphael Garcez Cordeiro Soares 
 
 ## Orientador
 
-* Nome completo do professor 1
+* Sandra Maria Silveira 
 
 ## Instruções de utilização
 
