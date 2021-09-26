@@ -5,16 +5,17 @@ Exercemos, com o passar dos anos, papéis cada vez mais complexos: estudantes, t
 ## Problema
 
 Conforme exposto, o problema que se busca resolver com este projeto é a falta de habilidade com ferramentas de edição de textos, bem como o conteúdo necessário para a formalização de documentos com aspectos formais e legais para as relações comerciais e pessoais do nosso cotidiano.
-Nesse momento, o grupo pode optar por fazer uso  de ferramentas como Design Thinking, que permite um olhar de ponta a ponta para o problema.
 
 ## Objetivos
 
-Aqui você deve descrever os objetivos do trabalho indicando que o objetivo geral é desenvolver um software para solucionar o problema apresentado acima. 
+O objetivo geral deste trabalho é, portanto, o desenvolvimento de uma plataforma que capacite o usuário a preencher documentos de maneira simplificada e ágil. 
 
-Apresente também alguns (pelo menos 2) objetivos específicos dependendo de onde você vai querer concentrar a sua prática investigativa, ou como você vai aprofundar no seu trabalho.
- 
-> **Links Úteis**:
-> - [Objetivo geral e objetivo específico: como fazer e quais verbos utilizar](https://blog.mettzer.com/diferenca-entre-objetivo-geral-e-objetivo-especifico/)
+Como objetivos específicos, podemos ressaltar:
+
+•	Permitir a seleção do documento que se deseja produzir;
+•	Realizar o desenvolvimento do documento desejado em pouco tempo e com o mínimo de esforço;
+•	Ter uma plataforma de fácil entendimento e acessível para todos os públicos.
+
 
 ## Justificativa
 
