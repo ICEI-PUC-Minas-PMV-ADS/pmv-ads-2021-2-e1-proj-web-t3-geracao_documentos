@@ -19,12 +19,12 @@ Como objetivos específicos, podemos ressaltar:
 
 ## Justificativa
 
-Descreva a importância ou a motivação para trabalhar com esta aplicação que você escolheu. Indique as razões pelas quais você escolheu seus objetivos específicos ou as razões para aprofundar em certos aspectos do software.
+Em um estudo realizado pela Consultoria McKinsey & Company, do ano de 2019, intitulada “Habilidades Digitais no Brasil - O potencial digital dos brasileiros: diagnóstico e oportunidades”, realizado com 2.477 participantes, entre 15 e 60 anos de idade, foram avaliados o conhecimento necessário para a configuração e o manuseio básico de aparelhos digitais ou programas de computador, isso inclui, trabalhar com editores de texto (categoria Habilidade de Acesso) e a capacidade para acessar conteúdo relevante de forma eficiente e interagir com o mundo digital (categoria Habilidade de Uso). 
 
-O grupo de trabalho pode fazer uso de questionários, entrevistas e dados estatísticos, que podem ser apresentados, com o objetivo de esclarecer detalhes do problema que será abordado pelo grupo.
+O estudo revelou que, no que se refere às Habilidades de Acesso, a pontuação média dos participantes foi de 3,5, já para as Habilidades de Uso, esta pontuação atingiu a média de 3,4, numa escala de 0 a 5. 
 
-> **Links Úteis**:
-> - [Como montar a justificativa](https://guiadamonografia.com.br/como-montar-justificativa-do-tcc/)
+Em paralelo, existe uma carência de sites com layouts intuitivos e de fácil navegação, para a geração e configuração de documentos diversos, o que dificulta o acesso deste público.
+
 
 ## Público-Alvo
 
