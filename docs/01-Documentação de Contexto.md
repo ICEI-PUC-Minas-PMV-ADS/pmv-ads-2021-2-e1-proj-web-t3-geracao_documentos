@@ -13,7 +13,9 @@ O objetivo geral deste trabalho é, portanto, o desenvolvimento de uma plataform
 Como objetivos específicos, podemos ressaltar:
 
 •	Permitir a seleção do documento que se deseja produzir;
+
 •	Realizar o desenvolvimento do documento desejado em pouco tempo e com o mínimo de esforço;
+
 •	Ter uma plataforma de fácil entendimento e acessível para todos os públicos.
 
 
