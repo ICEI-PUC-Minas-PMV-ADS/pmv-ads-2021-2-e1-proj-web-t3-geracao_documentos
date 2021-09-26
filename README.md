@@ -1,22 +1,24 @@
 #  Geração de Documentos
 
+![image](https://user-images.githubusercontent.com/89875612/134826073-d2d7f88d-07df-49f7-890f-2a661149ec35.png)
+
 `Análise e Desenvolvimento de Sistemas `
 
 `Desenvolvimento Web Front-end`
 
 `Primeiro Semestre`
 
-O objetivo geral é, o desenvolvimento de uma plataforma que capacite o usuário a preencher documentos de maneira simplificada e ágil.
+O objetivo geral é o desenvolvimento de uma plataforma que capacite o usuário a preencher documentos de maneira simplificada e ágil.
 
 ## Integrantes
 
-*  Ana Paula Buchholz
+* Ana Paula Buchholz
 * Andressa Cristina Lemes 
 * Douglas da Costa Santos 
 * Filipe Marques Martins Pascoal 
 * Raphael Garcez Cordeiro Soares 
 
-##Orientador
+## Orientador
 
 * Sandra Maria Silveira 
 
