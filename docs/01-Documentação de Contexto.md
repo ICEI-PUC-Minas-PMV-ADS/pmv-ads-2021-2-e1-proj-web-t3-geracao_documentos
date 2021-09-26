@@ -3,16 +3,9 @@
 Exercemos, com o passar dos anos, papéis cada vez mais complexos: estudantes, trabalhadores, parceiros, pais e assim por diante. Ao longo desse processo de exercer papéis, acaba sendo inevitável a realização de atividades burocráticas, que exigem a elaboração de documentos indispensáveis para a concretização de certos ritos. Importante, ainda, pensar na velocidade que as transformações ocorrem e na agilidade exigida, não somente das rotinas de cada indivíduo, mas também no capital das empresas. Considerando esse fato, observa-se uma grande demanda por ferramentas facilitadoras da rotina humana. 
  
 ## Problema
-Nesse momento você deve apresentar o problema que a sua aplicação deve  resolver. No entanto, não é a hora de comentar sobre a aplicação.
 
-Descreva também o contexto em que essa aplicação será usada, se  houver: empresa, tecnologias, etc. Novamente, descreva apenas o que de  fato existir, pois ainda não é a hora de apresentar requisitos  detalhados ou projetos.
-
+Conforme exposto, o problema que se busca resolver com este projeto é a falta de habilidade com ferramentas de edição de textos, bem como o conteúdo necessário para a formalização de documentos com aspectos formais e legais para as relações comerciais e pessoais do nosso cotidiano.
 Nesse momento, o grupo pode optar por fazer uso  de ferramentas como Design Thinking, que permite um olhar de ponta a ponta para o problema.
-
-> **Links Úteis**:
-> - [Objetivos, Problema de pesquisa e Justificativa](https://medium.com/@versioparole/objetivos-problema-de-pesquisa-e-justificativa-c98c8233b9c3)
-> - [Matriz Certezas, Suposições e Dúvidas](https://medium.com/educa%C3%A7%C3%A3o-fora-da-caixa/matriz-certezas-suposi%C3%A7%C3%B5es-e-d%C3%BAvidas-fa2263633655)
-> - [Brainstorming](https://www.euax.com.br/2018/09/brainstorming/)
 
 ## Objetivos
 
