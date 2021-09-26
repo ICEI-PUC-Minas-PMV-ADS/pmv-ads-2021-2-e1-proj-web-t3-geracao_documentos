@@ -1,6 +1,7 @@
 # Introdução
 
-Texto descritivo com a visão geral do projeto abordado. Inclui o contexto, o problema, os objetivos, a justificativa e to público-alvo do  projeto. 
+Exercemos, com o passar dos anos, papéis cada vez mais complexos: estudantes, trabalhadores, parceiros, pais e assim por diante. Ao longo desse processo de exercer papéis, acaba sendo inevitável a realização de atividades burocráticas, que exigem a elaboração de documentos indispensáveis para a concretização de certos ritos. Importante, ainda, pensar na velocidade que as transformações ocorrem e na agilidade exigida, não somente das rotinas de cada indivíduo, mas também no capital das empresas. Considerando esse fato, observa-se uma grande demanda por ferramentas facilitadoras da rotina humana. 
+ 
 ## Problema
 Nesse momento você deve apresentar o problema que a sua aplicação deve  resolver. No entanto, não é a hora de comentar sobre a aplicação.
 
