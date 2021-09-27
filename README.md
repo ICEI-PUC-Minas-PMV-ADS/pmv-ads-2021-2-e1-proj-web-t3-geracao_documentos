@@ -8,7 +8,7 @@
 
 `Primeiro Semestre`
 
-O objetivo geral é o desenvolvimento de uma plataforma que capacite o usuário a preencher documentos de maneira simplificada e ágil.
+O objetivo geral é o desenvolvimento de uma plataforma digital que capacite o usuário a preencher documentos de maneira simplificada e ágil.
 
 ## Integrantes
 
