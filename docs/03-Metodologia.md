@@ -3,17 +3,26 @@
 
 A aplicação foi desenvolvida em protocolo HTTP com linguagem de marcação HTML, estilização CSS, construída através do editor de texto Visual Studio Code. 
 
-## Controle de Versão
+## Relação de Ambientes de Trabalho 
 
-A ferramenta de controle de versão adotada no projeto foi o Git, sendo que o Github foi utilizado para hospedagem do repositório. (mudar a imagem) 
+Os artefatos do projeto são desenvolvidos a partir de diversas plataformas e a relação dos ambientes com seu respectivo propósito é apresentada na tabela que se segue.
 
-![image](https://user-images.githubusercontent.com/89875612/134829505-d3eccf5e-7fb7-4e4c-9d3d-f942c9c03d86.png)
+Ambiente | Plataforma | Link de Acesso |
+--- | --- | --- | 
+Repositório de código fonte | GitHub | https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2021-2-e1-proj-web-t3-geracao_documentos |
+Documentos do Projeto | Trello | https://trello.com/b/1FLxIkyC/trabalho-ads-etapa-2 |
+Projeto de Interface e Wireframes | MarvelApp | https://marvelapp.com/prototype/7790f5h/screen/82232136 | 
+Gerencimento do Projeto | Trello | https://trello.com/b/1FLxIkyC/trabalho-ads-etapa-2 | 
+
+## Gestão de código fonte 
+
+Para gestão do código fonte do software desenvolvido pela equipe, o grupo aplica um processo baseado no Git Flow, utilizando o Git Classroom. 
+
+![image](https://user-images.githubusercontent.com/89875612/135363138-b10e41a6-c524-4905-baea-ae31069e0eee.png)
 
 ## Gerenciamento de Projeto
 
-Utilizou-se das metodologias ágeis scrum e trello na organização do time. 
-
-### Divisão de Papéis
+A equipe utiliza metodologias ágeis, tendo escolhido o Scrum como base para definição do processo de desenvolvimento.
 
 A equipe está organizada da seguinte maneira
 
@@ -27,32 +36,26 @@ A equipe está organizada da seguinte maneira
 4. Equipe de Design
 - Filipe
 
-### Processo (PAREI AQUI)
+Para organização e distribuição das tarefas do projeto, a equipe está utilizando o Trello estruturado com as seguintes listas:
 
-Coloque  informações sobre detalhes da implementação do Scrum seguido pelo grupo. O grupo poderá fazer uso de ferramentas on-line para acompanhar o andamento do projeto, a execução das tarefas e o status de desenvolvimento da solução.
- 
-> **Links Úteis**:
-> - [Project management, made simple](https://github.com/features/project-management/)
-> - [Sobre quadros de projeto](https://docs.github.com/pt/github/managing-your-work-on-github/about-project-boards)
-> - [Como criar Backlogs no Github](https://www.youtube.com/watch?v=RXEy6CFu9Hk)
-> - [Tutorial Slack](https://slack.com/intl/en-br/)
+- Recursos: esta lista mantém um template de tarefas recorrentes com as configurações padronizadas que todos devem seguir. O objetivo é permitir a cópia destes templates para agilizar a criação de novos cartões.
+
+- Backlog: recebe as tarefas a serem trabalhadas e representa o Product Backlog. Todas as atividades identificadas no decorrer do projeto também devem ser incorporadas a esta lista.
+
+- To Do: Esta lista representa o Sprint Backlog. Este é o Sprint atual que estamos trabalhando.
+
+- Doing: Quando uma tarefa tiver sido iniciada, ela é movida para cá.
+
+- Test: Checagem de Qualidade. Quando as tarefas são concluídas, eles são movidas para o “CQ”. No final da semana, eu revejo essa lista para garantir que tudo saiu perfeito.
+
+- Done: nesta lista são colocadas as tarefas que passaram pelos testes e controle de qualidade e estão prontos para ser entregues ao usuário. Não há mais edições ou revisões necessárias, ele está agendado e pronto para a ação.
+
+- Locked: Quando alguma coisa impede a conclusão da tarefa, ela é movida para esta lista juntamente com um comentário sobre o que está travando a tarefa.
 
 ### Ferramentas
 
 As ferramentas empregadas no projeto são:
 
-- Editor de código.
-- Ferramentas de comunicação
-- Ferramentas de desenho de tela (_wireframing_)
-
-O editor de código foi escolhido porque ele possui uma integração com o
-sistema de versão. As ferramentas de comunicação utilizadas possuem
-integração semelhante e por isso foram selecionadas. Por fim, para criar
-diagramas utilizamos essa ferramenta por melhor captar as
-necessidades da nossa solução.
-
-Liste quais ferramentas foram empregadas no desenvolvimento do projeto, justificando a escolha delas, sempre que possível.
- 
-> **Possíveis Ferramentas que auxiliarão no gerenciamento**: 
-> - [Slack](https://slack.com/)
-> - [Github](https://github.com/)
+- Visual Studio Code 
+- Trello, Teams 
+- Marvelapp 
