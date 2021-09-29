@@ -54,7 +54,7 @@ Para organização e distribuição das tarefas do projeto, a equipe está utili
 
 ### Ferramentas
 
-As ferramentas empregadas no projeto são:
+As ferramentas empregadas para criação do projeto são:
 
 - Visual Studio Code 
 - Trello, Teams 
