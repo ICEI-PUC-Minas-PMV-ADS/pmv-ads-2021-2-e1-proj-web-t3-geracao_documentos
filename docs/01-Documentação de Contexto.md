@@ -4,11 +4,11 @@ Exercemos, com o passar dos anos, papéis cada vez mais complexos: estudantes, t
  
 ## Problema
 
-Conforme exposto, o problema que se busca resolver com este projeto é a falta de habilidade com ferramentas de edição de textos, bem como o conteúdo necessário para a formalização de documentos com aspectos formais e legais para as relações comerciais e pessoais do nosso cotidiano.
+O problema que se busca resolver com este projeto é a falta de habilidade com ferramentas de edição de textos, bem como o conteúdo necessário para a formalização de documentos com aspectos formais e legais para as relações comerciais e pessoais do nosso cotidiano.
 
 ## Objetivos
 
-O objetivo geral deste trabalho é, portanto, o desenvolvimento de uma plataforma que capacite o usuário a preencher documentos de maneira simplificada e ágil. 
+O objetivo geral deste trabalho é, o desenvolvimento de uma plataforma que capacite o usuário a preencher documentos de maneira simplificada e ágil. 
 
 Como objetivos específicos, podemos ressaltar:
 
