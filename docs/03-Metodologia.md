@@ -54,7 +54,7 @@ Para organização e distribuição das tarefas do projeto, a equipe está utili
 
 O quadro kanban do grupo no Trello está disponível através da URL https://trello.com/b/1FLxIkyC/trabalho-ads-etapa-2 e é apresentado, no estado atual abaixo.
 
-![image](https://user-images.githubusercontent.com/89875612/135364313-7fe1f851-3109-4e48-9a74-c42b65ec8070.png)
+![image](https://user-images.githubusercontent.com/89875612/135364972-9332fe9e-72c8-49f6-9401-d324359c6bdc.png)
  
 ### Ferramentas
 
