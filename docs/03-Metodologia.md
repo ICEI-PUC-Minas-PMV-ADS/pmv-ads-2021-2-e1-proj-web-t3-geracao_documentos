@@ -52,6 +52,10 @@ Para organização e distribuição das tarefas do projeto, a equipe está utili
 
 - Locked: Quando alguma coisa impede a conclusão da tarefa, ela é movida para esta lista juntamente com um comentário sobre o que está travando a tarefa.
 
+O quadro kanban do grupo no Trello está disponível através da URL https://trello.com/b/1FLxIkyC/trabalho-ads-etapa-2 e é apresentado, no estado atual abaixo.
+
+![image](https://user-images.githubusercontent.com/89875612/135364313-7fe1f851-3109-4e48-9a74-c42b65ec8070.png)
+ 
 ### Ferramentas
 
 As ferramentas empregadas para criação do projeto são:
