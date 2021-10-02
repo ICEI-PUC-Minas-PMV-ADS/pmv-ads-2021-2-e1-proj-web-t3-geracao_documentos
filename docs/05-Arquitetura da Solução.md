@@ -9,8 +9,6 @@ Os componentes que fazem parte da solução são apresentados na Figura que se s
 
 ![Diagrama de Componentes](img/componentes.png)
 
-
-
 A solução implementada conta com os seguintes módulos:
 
 **Navegador** - Interface básica do sistema  
