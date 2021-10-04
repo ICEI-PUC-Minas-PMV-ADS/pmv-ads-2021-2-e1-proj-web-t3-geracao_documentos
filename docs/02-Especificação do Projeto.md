@@ -35,18 +35,18 @@ A tabela a seguir apresenta os requisitos do projeto, identificando a prioridade
 
 ID | Descrição | Prioridade |
 --- | --- | --- | 
-RF-01 | O site deve possibilitar a edição/geração de recibos de pagamentos | Alta | 
-RF-02 | O site deve possibilitar a edição/geração de recibos de documentos entregues para admissão em serviço | Alta | 
-RF-03 | O site deve possibilitar a edição/geração de termo de compromisso, sigilo e confidencialidade | Alta |
-RF-04 | O site deve possibilitar a edição/geração de contrato de prestação de serviços | Alta |
-RF-05 | O site deve possibilitar a edição/geração de contratos de locação | Alta |
-RF-06 | O site deve possibilitar a edição/geração de carta de rescisão de contrato | Alta | 
-RF-07 | O site deve possibilitar a edição/geração de proposta para aquisição do imóvel | Alta | 
-RF-08 | O site deve possibilitar a edição/geração de contratos de compra e venda de bens materiais | Alta | 
-RF-09 | O site deve apresentar na página principal as categorias de documentos (ex: Documentos Jurídicos, Documentos Administrativos, Documentos Comerciais). | Alta | 
-RF-10 | O site deve permitir ao usuário visualizar o conteúdo do documento, ao mesmo tempo em que edita as informações nos campos destacados. | Alta | 
-RF-11 | O site deve oferecer uma funcionalidade de filtro/pesquisa para permitir ao usuário localizar um modelo de contrato específico  | Alta | 
-RF-12 | O site deve apresentar, para cada categoria de documento, uma imagem e/ou cor específica | Média | 
+RF-01|O site deve possibilitar a edição/geração de recibos de pagamentos | Alta | 
+RF-02|O site deve possibilitar a edição/geração de recibos de documentos entregues para admissão em serviço | Alta | 
+RF-03|O site deve possibilitar a edição/geração de termo de compromisso, sigilo e confidencialidade | Alta |
+RF-04|O site deve possibilitar a edição/geração de contrato de prestação de serviços | Alta |
+RF-05|O site deve possibilitar a edição/geração de contratos de locação | Alta |
+RF-06|O site deve possibilitar a edição/geração de carta de rescisão de contrato | Alta | 
+RF-07|O site deve possibilitar a edição/geração de proposta para aquisição do imóvel | Alta | 
+RF-08|O site deve possibilitar a edição/geração de contratos de compra e venda de bens materiais | Alta | 
+RF-09|O site deve apresentar na página principal as categorias de documentos (ex: Documentos Jurídicos, Documentos Administrativos, Documentos Comerciais). | Alta | 
+RF-10|O site deve permitir ao usuário visualizar o conteúdo do documento, ao mesmo tempo em que edita as informações nos campos destacados. | Alta | 
+RF-11|O site deve oferecer uma funcionalidade de filtro/pesquisa para permitir ao usuário localizar um modelo de contrato específico  | Alta | 
+RF-12|O site deve apresentar, para cada categoria de documento, uma imagem e/ou cor específica | Média | 
 
 ### Requisitos não Funcionais
 
