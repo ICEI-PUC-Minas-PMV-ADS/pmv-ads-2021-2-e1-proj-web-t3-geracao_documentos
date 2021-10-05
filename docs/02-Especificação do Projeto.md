@@ -46,10 +46,9 @@ RF08|O site deve possibilitar a edição/geração de contratos de compra e vend
 RF09|O site deve apresentar na página principal as categorias de documentos (ex: Documentos Jurídicos, Documentos Administrativos, Documentos Comerciais). | Alta | 
 RF10|O site deve permitir ao usuário visualizar o conteúdo do documento, ao mesmo tempo em que edita as informações nos campos destacados. | Alta | 
 RF11|O site deve oferecer uma funcionalidade de filtro/pesquisa para permitir ao usuário localizar um modelo de contrato específico  | Alta | 
-RF12|O site deve apresentar, para cada categoria de documento, uma imagem e/ou cor específica | Média | 
-RF13| | | 
-RF14| | | 
-RF15| | | 
+RF12|O site deve apresentar, para cada categoria de documento, uma imagem e/ou cor específica |Média| 
+RF13|O site deve possibilitar, para cada categoria de documento, uma ideia de template pronto para ser criado.|Alta|
+RF14|O site deve possibilitar a opção de corrigir documentos concluídos. |Alta| 
 
 ### Requisitos não Funcionais
 
