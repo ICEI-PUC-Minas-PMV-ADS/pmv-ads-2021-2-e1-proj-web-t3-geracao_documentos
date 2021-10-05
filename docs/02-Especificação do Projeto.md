@@ -18,12 +18,12 @@ Irene Santos | Emitir recibos de pagamento | Contratação de serviços terceiri
 Irene Santos | Gerar recibos de documentos entregues para a admissão em serviço | Gastar menos tempo indo ao escritório, ou esperando o documento ficar pronto |
 Irene Santos | Gerar termo de compromisso, sigilo e confidencialidade | Proteger dados estratégicos das partes envolvidas | 
 Irene Santos | Gerar contrato de prestação de serviços da sua empresa | Agilizar o fechamento de parcerias comerciais | 
-Irene Santos | | 
+Irene Santos | Pesquisar e visualizar templates de documentos prontos que podem ser gerados.| Com a finalidade de auxiliar em ideias e economizar tempo na criação da certidão |
 Francisco da Silva | Gerar contrato de locação | Alugar seus apartamentos com segurança e rapidez | 
 Francisco da Silva | Carta de rescisão de contrato | Caso seja necessário tirar um inquilino, ou o mesmo precisar sair sem terminar o tempo do contrato assinado |
 Francisco da Silva | Proposta para aquisição do imóvel | Vender seu apartamento | 
 Francisco da Silva | Gerar um contrato de compra e venda de bens materiais | Agilizar suas negociações | 
-Francisco da Silva | | 
+Francisco da Silva | Edição de registros concluídos| Alterar documentos já concluídos e fazer correções desejadas |
 
 ## Requisitos
 
@@ -47,6 +47,9 @@ RF09|O site deve apresentar na página principal as categorias de documentos (ex
 RF10|O site deve permitir ao usuário visualizar o conteúdo do documento, ao mesmo tempo em que edita as informações nos campos destacados. | Alta | 
 RF11|O site deve oferecer uma funcionalidade de filtro/pesquisa para permitir ao usuário localizar um modelo de contrato específico  | Alta | 
 RF12|O site deve apresentar, para cada categoria de documento, uma imagem e/ou cor específica | Média | 
+RF13| | | 
+RF14| | | 
+RF15| | | 
 
 ### Requisitos não Funcionais
 
