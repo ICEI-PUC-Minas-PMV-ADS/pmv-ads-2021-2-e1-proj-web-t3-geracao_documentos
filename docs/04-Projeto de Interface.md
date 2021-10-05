@@ -3,7 +3,7 @@
 
 Dentre as preocupações para a montagem da interface do sistema, estamos estabelecendo foco em questões como agilidade, acessibilidade e usabilidade. Desta forma, o projeto tem uma identidade visual padronizada em todas as telas que são projetadas para funcionamento em desktops e dispositivos móveis.
 
-![image](https://user-images.githubusercontent.com/89875612/135365503-781a5703-a6ab-434f-aff5-15bfaecb9baa.png)
+![image](https://user-images.githubusercontent.com/89875612/135945018-1508621f-0d29-48ad-87f9-d5179d25762d.png)
 
 ## User Flow
 
@@ -19,7 +19,7 @@ Conforme fluxo de telas do projeto, apresentado no item anterior, as telas do si
 - **Conteúdo** - apresenta o conteúdo da tela em questão;
 - **Barra lateral** - apresenta os elementos de navegação secundária, geralmente associados aos elementos do bloco de conteúdo.
 
-![image](https://user-images.githubusercontent.com/89875612/135367242-d10049cc-9fc2-4087-aed3-69e56d5925df.png)
+![image](https://user-images.githubusercontent.com/89875612/135945237-d42d2743-a78b-45c2-8a83-18b4b9d41791.png)
 
 **Tela - Home-Page**
 
@@ -28,14 +28,14 @@ A tela de home-page possui dois CTA’s (Call To Action), para, de uma maneira b
 - **Categorias:** permite o acesso de todas as categorias de documentos existentes no sistema;
 - **Pesquisar Documento:** permite o acesso a determinado documento ou a determinada categoria de documento.
 
-![image](https://user-images.githubusercontent.com/89875612/135367307-7dbf4fc4-ba68-4103-ac55-4ba4fba4cbf2.png)
+![image](https://user-images.githubusercontent.com/89875612/135945106-a6b9ad56-0805-4a32-be29-79854daace46.png)
 
 
 **Tela - Categorias** 
 
 A tela de categorias apresenta, em um Bloco Único de Conteúdo, todas as categorias de documentos que o sistema possui. Possui, ainda, um campo para o usuário pesquisar diretamente a categoria de interesse.
 
-![image](https://user-images.githubusercontent.com/89875612/135367381-3477ebf3-7dc4-4e68-91ed-a8d078293935.png)
+![image](https://user-images.githubusercontent.com/89875612/135945295-31a2223b-cb55-4d88-8b3d-ea14d9afb5a4.png)
 
 
 **Tela - Pesquisar Documento** 
@@ -49,7 +49,7 @@ Assim que o usuário clica no CTA “Pesquisar Documento”, na home-page, ele �
 
 A tela Categoria apresenta a lista de documentos inerentes a ela, em sua barra lateral. O usuário ainda pode pesquisar o documento desejado.
 
-![image](https://user-images.githubusercontent.com/89875612/135367515-6180f5e7-4c57-4d71-b6c0-2feb7a5ba9ac.png)
+![image](https://user-images.githubusercontent.com/89875612/135945373-3cfd550c-dcef-42df-a2f0-71c64d690786.png)
 
 
 **Tela - Edição do Documento** 
