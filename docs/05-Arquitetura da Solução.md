@@ -27,5 +27,4 @@ A solução implementada conta com os seguintes módulos:
 
 ## Hospedagem
 
-O site utiliza a plataforma do Heroku como ambiente de hospedagem do site do projeto. 
-O site é mantido no ambiente da URL: https://www.heroku.com/ 
+O site utiliza o Github Pages como ambiente de hospedagem do site do projeto. 
