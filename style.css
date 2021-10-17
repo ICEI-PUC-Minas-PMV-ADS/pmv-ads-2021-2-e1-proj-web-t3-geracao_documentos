@@ -1,0 +1,62 @@
+.div1 {
+  display: grid;
+  font-family: Arial, sans-serif;
+  grid-gap: 20px;
+  grid-template-areas:
+    "header header header"
+    "aside main main"
+    "footer footer footer";
+  grid-template-columns: 200px;
+  grid-template-rows: auto 500px auto;
+  }
+
+.div2 {
+  display: grid;
+  font-family: Arial, sans-serif;
+  grid-gap: 20px;
+  grid-template-areas:
+    "header header header"
+    "main main main"
+    "footer footer footer";
+  grid-template-columns: 200px;
+  grid-template-rows: auto 500px auto;
+  
+  }
+  
+  .o-cabecalho {
+    grid-area: header;
+    padding: 20px;
+    background: #badde0;
+     
+  }
+  
+  .o-menu-lateral {
+    grid-area: aside;
+    background: #badde0;
+    
+  }
+  
+  .o-conteudo {
+    grid-area: main;
+    background: #badde0 ;
+    text-align: center;
+    
+  }
+
+  .o-conteudo2 {
+    grid-area: main;
+    background: #badde0;
+    text-align: center;
+    grid-template-rows: auto 500px auto;
+    
+  }
+ 
+  .o-rodape {
+    grid-area: footer;
+    padding: 20px;
+    text-align: center;
+    background: #badde0;
+    
+  }
+  
+  
