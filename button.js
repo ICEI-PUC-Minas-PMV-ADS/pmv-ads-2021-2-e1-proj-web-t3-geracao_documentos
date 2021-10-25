@@ -1,5 +1,5 @@
 function clicar() {
-    window.open("pagina-categorias.html");
-
+    window.open("pagina-categorias.html", "_self");
+        
 }
 
