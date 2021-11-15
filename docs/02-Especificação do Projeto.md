@@ -19,9 +19,9 @@ Irene Santos | Gerar recibos de documentos entregues para a admissão em serviç
 Irene Santos | Gerar termo de compromisso, sigilo e confidencialidade | Proteger dados estratégicos das partes envolvidas | 
 Irene Santos | Gerar contrato de prestação de serviços da sua empresa | Agilizar o fechamento de parcerias comerciais | 
 Irene Santos | Pesquisar e visualizar templates de documentos prontos que podem ser gerados.| Com a finalidade de auxiliar em ideias e economizar tempo na criação da certidão |
-Irene Santos | Emitir proposta comercial | Convertet prospects em clientes | 
-Francisco da Silva | Emitir procuração | Afim de agilizar processos internos dos alugueis | 
-Francisco da Silva | Gerar declaração de residencia | Afim de, o morador comprovar que reside no endereço | 
+Irene Santos | Emitir proposta comercial | Converter seguidores do Instagram em clientes | 
+Francisco da Silva | Emitir procuração | Agilizar processos internos dos alugueis | 
+Francisco da Silva | Gerar declaração de residencia | O morador comprovar que reside no endereço | 
 Francisco da Silva | Gerar contrato de locação | Alugar seus apartamentos com segurança e rapidez | 
 Francisco da Silva | Carta de rescisão de contrato | Caso seja necessário tirar um inquilino, ou o mesmo precisar sair sem terminar o tempo do contrato assinado |
 Francisco da Silva | Proposta para aquisição do imóvel | Vender seu apartamento | 
