@@ -19,11 +19,15 @@ Irene Santos | Gerar recibos de documentos entregues para a admissão em serviç
 Irene Santos | Gerar termo de compromisso, sigilo e confidencialidade | Proteger dados estratégicos das partes envolvidas | 
 Irene Santos | Gerar contrato de prestação de serviços da sua empresa | Agilizar o fechamento de parcerias comerciais | 
 Irene Santos | Pesquisar e visualizar templates de documentos prontos que podem ser gerados.| Com a finalidade de auxiliar em ideias e economizar tempo na criação da certidão |
+Irene Santos | Emitir proposta comercial | Convertet prospects em clientes | 
+Francisco da Silva | Emitir procuração | Afim de agilizar processos internos dos alugueis | 
+Francisco da Silva | Gerar declaração de residencia | Afim de, o morador comprovar que reside no endereço | 
 Francisco da Silva | Gerar contrato de locação | Alugar seus apartamentos com segurança e rapidez | 
 Francisco da Silva | Carta de rescisão de contrato | Caso seja necessário tirar um inquilino, ou o mesmo precisar sair sem terminar o tempo do contrato assinado |
 Francisco da Silva | Proposta para aquisição do imóvel | Vender seu apartamento | 
 Francisco da Silva | Gerar um contrato de compra e venda de bens materiais | Agilizar suas negociações | 
 Francisco da Silva | Edição de registros concluídos| Alterar documentos já concluídos e fazer correções desejadas |
+
 
 ## Requisitos
 
@@ -57,10 +61,9 @@ A tabela a seguir apresenta os requisitos não funcionais que o projeto deverá 
 ID | Descrição | Prioridade |
 --- | --- | --- | 
 RNF01 | O site deve ter integração com sites/sistemas de assinatura eletrônica (ex: Authentique, Clicksign) | Alta | 
-RNF02 | O site deverá ser responsivo, permitindo a visualização em dispositivos móveis | Alta | 
-RNF03 | O site deve ter navegação simples e intuitiva | Alta | 
-RNF04 | O site deve ser compatível com os principais navegadores do mercado (Google Chrome, Opera, Firefox, Microsoft Edge) | Alta | 
-RNF05 | O sistema deve ter um banco de dados robusto, que não permita travamentos por excesso de arquivos armazenados | Alta | 
+RNF02 | O site deve ter navegação simples e intuitiva | Alta | 
+RNF03 | O site deve ser compatível com os principais navegadores do mercado (Google Chrome, Opera, Firefox, Microsoft Edge) | Alta | 
+RNF04 | O sistema deve ter um banco de dados robusto, que não permita travamentos por excesso de arquivos armazenados | Alta | 
 
 ## Restrições
 
