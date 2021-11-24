@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Pesquisar Documento</title>
+   <link rel="stylesheet" href="style.css">
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.4.1/jspdf.debug.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/2.3.4/jspdf.plugin.autotable.min.js"></script>
+</head>
+
+<body>
+   <div>
+      <header class="o-cabecalho">
+         <a href="index.html"><img src="img/1 (1).png" alt="imagem_logo"></a>
+   </div>
+   <div class="barra-de-pesquisa">
+      <h2>Financeiro</h2>
+   </div>
+   <aside class="lista">
+      <ul>
+         <li>Recibo de Pagamento</li>
+      </ul>
+
+      <div class="forms1">
+         <div class="forms2">
+            <label>Vendedor: </label>
+            <input type="text" name="vendedor" id="vendedor"><br><br>
+            <label>CPF do vendedor: </label>
+            <input type="text" name="cpfvendedor" id="cpfvendedor"><br><br>
+            <label>Cliente:</label>
+            <input type="text" name="cliente" id="cliente"><br><br>
+            <label>CPF do cliente:</label>
+            <input type="numver" name="cpfcliente" id="cpfcliente"><br><br>
+            <label>Valor do recibo: </label>
+            <input type="number" name="rs" id="rs"><br><br>
+            <label>Valor por extenso: </label>
+            <input type="text" name="rs_puro" id="rs_puro"><br><br><br>
+            <label>Serviço </label>
+            <input type="text" name="servico" id="servico"><br><br><br>
+            <label>Local </label>
+            <input type="text" name="local" id="local"><br><br><br>
+            <label>Data </label>
+            <input type="text" name="data" id="data"><br><br><br>
+            <div>
+               <button id="getPDF" class="butrecibo">Gerar recibo</button>
+            </div>
+
+         </div>
+      </div>
+      <br>
+      <p class="resultado">
+         Recibo de Pagamento<br><br>
+
+         Eu <a id="res_vendedor"></a> portador(a) do CPF <a id="res_cpfvendedor"></a> declaro que recebi do Sr(a). <a id="res_cliente"></a> brasileiro(a) cujo CPF é <a id="res_cpfcliente"></a>, a quantia de R$ <a id="res_rs"></a> (<a id="res_rs_puro"></a>), referente a: <a id="res_servico"></a>, dando-lhe por este recibo a devida quitação.
+
+         <br><br>
+
+         Local e Data: <a id="res_local"></a> em <a id="res_data"></a>.
+      </p>
+      <br><br>
+
+      <script>
+         $('.forms2 input[name]').each(function(){
+            let input = $(this)
+
+            $(this).on('input', function(){
+               let name = input.attr('name')
+
+               let target = $('#res_'+name)
+
+               let value = input.val()
+
+               if(input.attr('type') == 'number')
+                  value = value.replace('.', ',');
+
+               target.text(value)
+            })
+         })
+
+         function getPDF() {
+            var doc = new jsPDF();
+            
+               var specialElementHandlers = {
+                  '#getPDF': function(element, renderer){
+                     return true;
+                  },
+                  'br': function(element, renderer){
+                     return true;
+                  }
+               };
+
+               doc.fromHTML($('p.resultado').get(0), 15, 15, {
+                  'width': 170, 
+                  'elementHandlers': specialElementHandlers
+               });
+
+               doc.save('Generated.pdf');
+            }
+      </script>
+</body>
+
+</html>
