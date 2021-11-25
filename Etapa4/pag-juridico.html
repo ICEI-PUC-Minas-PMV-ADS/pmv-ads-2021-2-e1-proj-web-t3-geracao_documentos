@@ -10,7 +10,6 @@
 </head>
 
 <body>
-
     <div>
         <header class="o-cabecalho">
             <a href="index.html"><img src="img/1 (1).png" alt="imagem_logo"></a>
@@ -18,43 +17,104 @@
 
     <div class="barra-de-pesquisa">
         <h2>Juridico</h2>
-    
     </div>
-
     <aside class="lista">
         <ul>
-            <li>Procuração</li>
-           
+            <li>ProcuraçãoJudicial</li>
         </ul>
+
         <div class="forms1">
             <div class="forms2">
-               <label>Vendedor: </label>
-               <input type="text" name="vendedor" id="vendedor"><br><br>
-               <label>CPF do vendedor: </label>
-               <input type="text" name="cpfvendedor" id="cpfvendedor"><br><br>
-               <label>Cliente:</label>
-               <input type="text" name="cliente" id="cliente"><br><br>
-               <label>CPF do cliente:</label>
-               <input type="numver" name="cpfcliente" id="cpfcliente"><br><br>
-               <label>Valor do recibo: </label>
-               <input type="number" name="rs" id="rs"><br><br>
-               <label>Valor por extenso: </label>
-               <input type="text" name="rs_puro" id="rs_puro"><br><br><br>
-               <label>Serviço </label>
-               <input type="text" name="servico" id="servico"><br><br><br>
+               <label>Outorgante: </label>
+               <input type="text" name="outorgante" id="outorgante"><br><br>
+               <label>CPF do outorgante: </label>
+               <input type="number" name="cpfoutorgante" id="cpfoutorgante"><br><br>
+               <label>Nacionalidade: </label>
+               <input type="text" name="nacionalidade" id="nacionalidade"><br><br>
+               <label>Estado Civil: </label>
+               <input type="text" name="estadocivil" id="estadocivil"><br><br>
+               <label>Profissão:  </label>
+               <input type="text" name="profissao" id="profissao"><br><br>
+               <label>E-mail: </label>
+               <input type="text" name="email" id="email"><br><br><br>
+               <label>Rua: </label>
+               <input type="text" name="rua" id="rua"><br><br><br>
+               <label>Nº: </label>
+               <input type="text" name="numero" id="numero"><br><br><br>
+               <label>Bairro: </label>
+               <input type="text" name="bairro" id="bairro"><br><br><br>
+               <label>Cidade: </label>
+               <input type="text" name="cidade" id="cidade"><br><br><br>
+               <label>CEP: </label>
+               <input type="number" name="cepoutorgante" id="cepoutorgante"><br><br><br>
                <label>Local </label>
                <input type="text" name="local" id="local"><br><br><br>
                <label>Data </label>
                <input type="text" name="data" id="data"><br><br><br>
                <div>
-                  <button id="getPDF" class="butrecibo">Gerar recibo</button>
+                  <button id="getPDF" class="butrecibo">Gerar Procuração</button>
                </div>
    
             </div>
          </div>
     </aside>
+    <br>
+    <p class="resultado">
+       Procuração Judicial<br><br>
 
-   
+       Eu <a id="res_outorgante"></a> inscrito no CPF nº <a id="res_cpfoutorgante"></a>,<a id="res_nacionalidade"></a>, <a id="res_estadocivil"></a>, <a id="res_profissao"></a>
+        (<a id="res_rs_puro"></a>), <a id="res_email"></a> residente e domiciliado na rua <a id="res_rua"></a>, sob o nº <a id="res_numero"></a>, bairro <a id="res_bairro"></a> 
+        , na Cidade de<a id="res_cidade"></a>, CEP nº <a id="res_cepoutorgante"></a> nomeia(m) os outorgados seus procuradores, conferindo-lhes os poderes da cláusula 
+        "ad judicia" e "ad extra", conjunta ou separadamente, para representá-lo(s) em juízo ou fora dele, outorgando-lhes ainda os especiais poderes para receber citação, 
+        de concordar, acordar, confessar, discordar, desistir, transigir, firmar compromissos, reconhecer a procedência do pedido, renunciar ao direito sobre o qual se funda a ação,
+         receber, dar quitação, executar e fazer cumprir decisões e títulos judiciais e extrajudiciais, receber valores e levantar alvarás judiciais extraídos em nome do outorgante, 
+         requerer falências e concordatas, imputar a terceiros, em nome dos outorgantes, fatos descritos como crimes, argüir exceções de suspeição, firmar compromisso e declarar 
+         suficiência econômica, constituir preposto, substabelecer com ou sem reserva os poderes conferidos pelo presente mandato. Declara ainda, que tem ciência que o 
+         levantamento de créditos decorrentes de precatório ou RPV somente poderá ser efetivado mediante alvará judicial.
+       <br><br>
+
+       Local e Data: <a id="res_local"></a> em <a id="res_data"></a>.
+    </p>
+    <br><br>
+
+    <script>
+        $('.forms2 input[name]').each(function(){
+           let input = $(this)
+
+           $(this).on('input', function(){
+              let name = input.attr('name')
+
+              let target = $('#res_'+name)
+
+              let value = input.val()
+
+              if(input.attr('type') == 'number')
+                 value = value.replace('.', ',');
+
+              target.text(value)
+           })
+        })
+
+        function getPDF() {
+           var doc = new jsPDF();
+           
+              var specialElementHandlers = {
+                 '#getPDF': function(element, renderer){
+                    return true;
+                 },
+                 'br': function(element, renderer){
+                    return true;
+                 }
+              };
+
+              doc.fromHTML($('p.resultado').get(0), 15, 15, {
+                 'width': 170, 
+                 'elementHandlers': specialElementHandlers
+              });
+
+              doc.save('Generated.pdf');
+           }
+     </script>  
 </body>
 
 </html>
