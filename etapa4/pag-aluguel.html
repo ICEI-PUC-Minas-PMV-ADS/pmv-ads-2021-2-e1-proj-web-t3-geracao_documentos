@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pesquisar Documento</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.4.1/jspdf.debug.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/2.3.4/jspdf.plugin.autotable.min.js"></script>
+</head>
+
+<body>
+
+    <div>
+        <header class="o-cabecalho">
+            <a href="index.html"><img src="img/1 (1).png" alt="imagem_logo"></a>
+    </div>
+
+    <div class="texto-modalidade">
+        <h2>Aluguel</h2>
+        <h3>Contrato de Fiança</h3>
+    </div>
+
+    <div class="forms1">
+        <div class="forms2">
+            <form class="row g-3">
+                <div><b>DADOS DO FIADOR</b></div>
+                <div class="col-md-4">
+                    <label class="form-label">Nome</label><br>
+                    <input type="text" class="form-control" name="nomefiador" id="nomefiador">
+                </div>
+                <div class="col-md-4">
+                    <label class="form-label">Nacionalidade</label><br>
+                    <input type="text" class="form-control" name="nacfiador" id="nacfiador">
+                </div>
+                <div class="col-md-4">
+                    <label class="form-label">Estado Civil</label><br>
+                    <input type="text" class="form-control" name="estcivfiador" id="estcivfiador">
+                </div>
+                <div class="col-md-4">
+                    <label class="form-label">Profissão</label><br>
+                    <input type="text" class="form-control" name="proffiador" id="proffiador">
+                </div>
+                <div class="col-md-4">
+                    <label class="form-label">CPF</label><br>
+                    <input type="number" class="form-control" name="cpffiador" id="cpffiador">
+                </div>
+                <div class="col-md-4">
+                    <label class="form-label">RG</label><br>
+                    <input type="text" class="form-control" name="rgfiador" id="rgfiador">
+                </div>
+                <div class="col-12">
+                    <label class="form-label">Endereço Completo</label><br>
+                    <input type="text" class="form-control" name="endfiador" id="endfiador">
+                </div>
+                <hr>
+                <div><b>DADOS DO FIANÇADO</b></div>
+                <div class="col-md-4">
+                    <label class="form-label">Nome</label><br>
+                    <input type="text" class="form-control" name="nomefianc" id="nomefianc">
+                </div>
+                <div class="col-md-4">
+                    <label class="form-label">Nacionalidade</label><br>
+                    <input type="text" class="form-control" name="nacfianc" id="nacfianc">
+                </div>
+                <div class="col-md-4">
+                    <label class="form-label">Estado Civil</label><br>
+                    <input type="text" class="form-control" name="estcivfianc" id="estcivfianc">
+                </div>
+                <div class="col-md-4">
+                    <label class="form-label">Profissão</label><br>
+                    <input type="text" class="form-control" name="proffianc" id="proffianc">
+                </div>
+                <div class="col-md-4">
+                    <label class="form-label">CPF</label><br>
+                    <input type="number" class="form-control" name="cpffianc" id="cpffianc"> 
+                </div>
+                <div class="col-md-4">
+                    <label class="form-label">RG</label><br>
+                    <input type="text" class="form-control" name="rgfianc" id="rgfianc">
+                </div>
+                <div class="col-12">
+                    <label class="form-label">Endereço Completo</label><br>
+                    <input type="text" class="form-control" name="endfianc" id="endfianc">
+                </div>
+                <hr>
+                <div><b>DADOS DO CREDOR</b></div>
+                <div class="col-md-4">
+                    <label class="form-label">Nome</label><br>
+                    <input type="text" class="form-control" name="nomecred" id="nomecred">
+                </div>
+                <div class="col-md-4">
+                    <label class="form-label">Nacionalidade</label><br>
+                    <input type="text" class="form-control" name="naccred" id="naccred">
+                </div>
+                <div class="col-md-4">
+                    <label class="form-label">Estado Civil</label><br>
+                    <input type="text" class="form-control" name="estcivcred" id="estcivcred">
+                </div>
+                <div class="col-md-4">
+                    <label class="form-label">Profissão</label><br>
+                    <input type="text" class="form-control" name="profcred" id="profcred">
+                </div>
+                <div class="col-md-4">
+                    <label class="form-label">CPF</label><br>
+                    <input type="number" class="form-control" name="cpfcred" id="cpfcred"> 
+                </div>
+                <div class="col-md-4">
+                    <label class="form-label">RG</label><br>
+                    <input type="text" class="form-control" name="rgcred" id="rgcred">
+                </div>
+                <div class="col-12">
+                    <label class="form-label">Endereço Completo</label><br>
+                    <input type="text" class="form-control" name="endcred" id="endcred">
+                </div>
+                <hr>
+                <div class="col-md-6">
+                    <label class="form-label">Município do Foro (para dirimir questões relativas a este contrato)</label><br>
+                    <input type="text" class="form-control" name="munic" id="munic">
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label">UF do Foro (para dirimir questões relativas a este contrato)</label><br>
+                    <input type="text" class="form-control" name="uf" id="uf">
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label">Local</label><br>
+                    <input type="text" class="form-control" name="local" id="local">
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label">Data</label><br>
+                    <input type="text" class="form-control" name="data" id="data">
+                </div>
+                <div class="col-md-12">
+                    <button class="btn btn-light" id="getPDF">Gerar Contrato</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <br>
+
+    <p class="resultado">
+        CONTRATO DE FIANÇA<br><br>
+        As partes deste contrato são aquelas qualificadas a seguir:<br><br>
+        FIADOR: <a id="res_nomefiador"></a>, <a id="res_nacfiador"></a>, <a id="res_estcivfiador"></a>, <a id="res_proffiador"></a>, inscrito(a) no CPF sob o nº <a id="res_cpffiador"></a> e no RG nº <a id="res_rgfiador"></a>, residente e domiciliado à <a id="res_endfiador"></a>.<br><br>
+        FIANÇADO: <a id="res_nomefianc"></a>, <a id="res_nacfianc"></a>, <a id="res_estcivfianc"></a>, <a id="res_proffianc"></a>, inscrito(a) no CPF sob o nº <a id="res_cpffianc"></a> e no RG nº <a id="res_rgfianc"></a>, residente e domiciliado à <a id="res_endfianc"></a>.<br><br> 
+        CREDOR: <a id="res_nomecred"></a>, <a id="res_naccred"></a>, <a id="res_estcivcred"></a>, <a id="res_profcred"></a>, inscrito(a) no CPF sob o nº <a id="res_cpfcred"></a> e no RG nº <a id="res_rgcred"></a>, residente e domiciliado à <a id="res_endcred"></a>.<br><br>
+        Têm entre si, justo e acertado o presente contrato de fiança que será regido pelas cláusulas a seguir descritas.<br><br>
+
+        Cláusula 1ª. O presente tem como objeto a fiança prestada neste ato pelos FIADOR ao AFIANÇADO, no que diz respeito às obrigações assumidas por este perante o CREDOR decorrente do contrato de (informar), firmado em (data), o qual integra este instrumento.<br><br>
+
+        Cláusula 2ª. As obrigações mencionadas na cláusula anterior, afiançadas pelo FIADOR, envolvem tanto o principal quanto multas, juros e correção decorrentes de eventual inadimplência.<br><br>
+
+        Cláusula 3ª. O FIADOR se obriga subsidiariamente como responsável pelo cumprimento das obrigações mencionadas nas cláusulas anteriores.<br><br>
+
+        Cláusula 4ª. O FIADOR se obriga a comunicar ao CREDOR, por escrito, eventual mudança de endereço.<br><br>
+
+        Cláusula 5ª. O presente contrato passa a vigorar a partir da assinatura das partes.<br><br>
+
+        Cláusula 6ª. Fica eleito o foro da comarca de <a id="res_munic"></a> - <a id="res_uf"></a> para dirimir qualquer questão relativa a este contrato.<br><br>
+
+        E por estarem assim justas e contratadas, as partes assinam o presente contrato em 02 (duas) vias de igual teor e forma, juntamente com duas testemunhas.<br><br>
+
+        Local e Data: <a id="res_local"></a>, <a id="res_data"></a>.<br><br>
+
+        Assinaturas:<br><br>
+        
+        Fiador:<br><br>
+        Fiançado:<br><br>
+        Credor:<br><br>
+        Testemunha:<br><br>
+        Testemunha:<br><br>
+
+    </p>
+
+
+    <br><br>
+
+    <script>
+        $('.forms2 input[name]').each(function () {
+            let input = $(this)
+
+            $(this).on('input', function () {
+                let name = input.attr('name')
+
+                let target = $('#res_' + name)
+
+                let value = input.val()
+
+                if (input.attr('type') == 'number')
+                    value = value.replace('.', ',');
+
+                target.text(value)
+            })
+        })
+
+        function getPDF() {
+            var doc = new jsPDF();
+
+            var specialElementHandlers = {
+                '#getPDF': function (element, renderer) {
+                    return true;
+                },
+                'br': function (element, renderer) {
+                    return true;
+                }
+            };
+
+            doc.fromHTML($('p.resultado').get(0), 15, 15, {
+                'width': 170,
+                'elementHandlers': specialElementHandlers
+            });
+
+            doc.save('Generated.pdf');
+        }
+
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
