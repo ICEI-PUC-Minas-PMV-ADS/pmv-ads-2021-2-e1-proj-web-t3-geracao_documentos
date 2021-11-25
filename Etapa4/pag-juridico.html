@@ -7,117 +7,169 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pesquisar Documento</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.4.1/jspdf.debug.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/2.3.4/jspdf.plugin.autotable.min.js"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/2.3.4/jspdf.plugin.autotable.min.js"></script>
 </head>
 
 <body>
+
     <div>
         <header class="o-cabecalho">
             <a href="index.html"><img src="img/1 (1).png" alt="imagem_logo"></a>
     </div>
 
-    <div class="barra-de-pesquisa">
+    <div class="texto-modalidade">
         <h2>Juridico</h2>
+        <h3>Procuração Judicial</h3>
     </div>
-    <aside class="lista">
-        <ul>
-            <li>ProcuraçãoJudicial</li>
-        </ul>
 
-        <div class="forms1">
-            <div class="forms2">
-               <label>Outorgante: </label>
-               <input type="text" name="outorgante" id="outorgante"><br><br>
-               <label>CPF do outorgante: </label>
-               <input type="number" name="cpfoutorgante" id="cpfoutorgante"><br><br>
-               <label>Nacionalidade: </label>
-               <input type="text" name="nacionalidade" id="nacionalidade"><br><br>
-               <label>Estado Civil: </label>
-               <input type="text" name="estadocivil" id="estadocivil"><br><br>
-               <label>Profissão:  </label>
-               <input type="text" name="profissao" id="profissao"><br><br>
-               <label>E-mail: </label>
-               <input type="text" name="email" id="email"><br><br><br>
-               <label>Rua: </label>
-               <input type="text" name="rua" id="rua"><br><br><br>
-               <label>Nº: </label>
-               <input type="text" name="numero" id="numero"><br><br><br>
-               <label>Bairro: </label>
-               <input type="text" name="bairro" id="bairro"><br><br><br>
-               <label>Cidade: </label>
-               <input type="text" name="cidade" id="cidade"><br><br><br>
-               <label>CEP: </label>
-               <input type="number" name="cepoutorgante" id="cepoutorgante"><br><br><br>
-               <label>Local </label>
-               <input type="text" name="local" id="local"><br><br><br>
-               <label>Data </label>
-               <input type="text" name="data" id="data"><br><br><br>
-               <div>
-                  <button id="getPDF" class="butrecibo">Gerar Procuração</button>
-               </div>
-   
-            </div>
-         </div>
-    </aside>
-    <br>
+    <div class="forms1">
+        <div class="forms2">
+            <form class="row g-3">
+
+                <div class="col-md-4">
+                    <label class="form-label">Outorgante</label><br>
+                    <input type="text" class="form-control" name="outorgante" id="outorgante">
+                </div>
+
+                <div class="col-md-4">
+                    <label class="form-label">CPF Outorgante</label><br>
+                    <input type="text" class="form-control" name="cpfoutorgante" id="cpfoutorgante">
+                </div>
+
+                <div class="col-md-4">
+                    <label class="form-label">Nacionalidade</label><br>
+                    <input type="text" class="form-control" name="nacionalidade" id="nacionalidade">
+                </div>
+
+                <div class="col-md-4">
+                    <label class="form-label">Estado Civil</label><br>
+                    <input type="text" class="form-control" name="estadocivil" id="estadocivil">
+                </div>
+
+                <div class="col-md-4">
+                    <label class="form-label">Profissão</label><br>
+                    <input type="text" class="form-control" name="profissao" id="profissao">
+                </div>
+
+                <div class="col-md-4">
+                    <label class="form-label">E-mail</label><br>
+                    <input type="text" class="form-control" name="email" id="email">
+                </div>
+
+                <div class="col-md-4">
+                    <label class="form-label">Rua</label><br>
+                    <input type="text" class="form-control" name="rua" id="rua">
+                </div>
+
+                <div class="col-md-4">
+                    <label class="form-label">N°</label><br>
+                    <input type="number" class="form-control" name="numero" id="numero">
+                </div>
+
+                <div class="col-md-4">
+                    <label class="form-label">Bairro</label><br>
+                    <input type="text" class="form-control" name="bairro" id="bairro">
+                </div>
+
+                <div class="col-md-4">
+                    <label class="form-label">Cidade</label><br>
+                    <input type="text" class="form-control" name="cidade" id="cidade">
+                </div>
+
+                <div class="col-md-4">
+                    <label class="form-label">CEP</label><br>
+                    <input type="text" class="form-control" name="cepoutorgante" id="cepoutorgante">
+                </div>
+
+                <div class="col-md-4">
+                    <label class="form-label">Local</label><br>
+                    <input type="text" class="form-control" name="local" id="local">
+                </div>
+
+                <div class="col-md-4">
+                    <label class="form-label">Data</label><br>
+                    <input type="text" class="form-control" name="data" id="data">
+                </div>
+
+                <div class="col-md-12">
+                    <button class="btn btn-light" id="getPDF">Gerar Procuração</button>
+                </div>
+
+            </form>
+        </div>
+    </div>
     <p class="resultado">
-       Procuração Judicial<br><br>
+        Procuração Judicial<br><br>
 
-       Eu, <a id="res_outorgante"></a> inscrito no CPF nº <a id="res_cpfoutorgante"></a>,<a id="res_nacionalidade"></a>, <a id="res_estadocivil"></a>, <a id="res_profissao"></a>
-        (<a id="res_rs_puro"></a>), <a id="res_email"></a> residente e domiciliado na rua <a id="res_rua"></a>, sob o nº <a id="res_numero"></a>, bairro <a id="res_bairro"></a> 
-        , na Cidade de <a id="res_cidade"></a>, CEP nº <a id="res_cepoutorgante"></a> nomeia(m) os outorgados seus procuradores, conferindo-lhes os poderes da cláusula 
-        "ad judicia" e "ad extra", conjunta ou separadamente, para representá-lo(s) em juízo ou fora dele, outorgando-lhes ainda os especiais poderes para receber citação, 
-        de concordar, acordar, confessar, discordar, desistir, transigir, firmar compromissos, reconhecer a procedência do pedido, renunciar ao direito sobre o qual se funda a ação,
-         receber, dar quitação, executar e fazer cumprir decisões e títulos judiciais e extrajudiciais, receber valores e levantar alvarás judiciais extraídos em nome do outorgante, 
-         requerer falências e concordatas, imputar a terceiros, em nome dos outorgantes, fatos descritos como crimes, argüir exceções de suspeição, firmar compromisso e declarar 
-         suficiência econômica, constituir preposto, substabelecer com ou sem reserva os poderes conferidos pelo presente mandato. Declara ainda, que tem ciência que o 
-         levantamento de créditos decorrentes de precatório ou RPV somente poderá ser efetivado mediante alvará judicial.
-       <br><br>
+        Eu, <a id="res_outorgante"></a> inscrito no CPF nº <a id="res_cpfoutorgante"></a> <a
+            id="res_nacionalidade"></a> <a id="res_estadocivil"></a> <a id="res_profissao"></a>
+        (<a id="res_rs_puro"></a>) <a id="res_email"></a> residente e domiciliado na rua <a id="res_rua"></a>, sob o nº
+        <a id="res_numero"></a>, bairro <a id="res_bairro"></a>
+        , na Cidade de <a id="res_cidade"></a>, CEP nº <a id="res_cepoutorgante"></a> nomeia(m) os outorgados seus
+        procuradores, conferindo-lhes os poderes da cláusula
+        "ad judicia" e "ad extra", conjunta ou separadamente, para representá-lo(s) em juízo ou fora dele,
+        outorgando-lhes ainda os especiais poderes para receber citação,
+        de concordar, acordar, confessar, discordar, desistir, transigir, firmar compromissos, reconhecer a procedência
+        do pedido, renunciar ao direito sobre o qual se funda a ação,
+        receber, dar quitação, executar e fazer cumprir decisões e títulos judiciais e extrajudiciais, receber valores e
+        levantar alvarás judiciais extraídos em nome do outorgante,
+        requerer falências e concordatas, imputar a terceiros, em nome dos outorgantes, fatos descritos como crimes,
+        argüir exceções de suspeição, firmar compromisso e declarar
+        suficiência econômica, constituir preposto, substabelecer com ou sem reserva os poderes conferidos pelo presente
+        mandato. Declara ainda, que tem ciência que o
+        levantamento de créditos decorrentes de precatório ou RPV somente poderá ser efetivado mediante alvará judicial.
+        <br><br>
 
-       Local e Data: <a id="res_local"></a> em <a id="res_data"></a>.
+        Local e Data: <a id="res_local"></a> em <a id="res_data"></a>.
     </p>
     <br><br>
-
     <script>
-        $('.forms2 input[name]').each(function(){
-           let input = $(this)
+        $('.forms2 input[name]').each(function () {
+            let input = $(this)
 
-           $(this).on('input', function(){
-              let name = input.attr('name')
+            $(this).on('input', function () {
+                let name = input.attr('name')
 
-              let target = $('#res_'+name)
+                let target = $('#res_' + name)
 
-              let value = input.val()
+                let value = input.val()
 
-              if(input.attr('type') == 'number')
-                 value = value.replace('.', ',');
+                if (input.attr('type') == 'number')
+                    value = value.replace('.', ',');
 
-              target.text(value)
-           })
+                target.text(value)
+            })
         })
 
         function getPDF() {
-           var doc = new jsPDF();
-           
-              var specialElementHandlers = {
-                 '#getPDF': function(element, renderer){
-                    return true;
-                 },
-                 'br': function(element, renderer){
-                    return true;
-                 }
-              };
+            var doc = new jsPDF();
 
-              doc.fromHTML($('p.resultado').get(0), 15, 15, {
-                 'width': 170, 
-                 'elementHandlers': specialElementHandlers
-              });
+            var specialElementHandlers = {
+                '#getPDF': function (element, renderer) {
+                    return true;
+                },
+                'br': function (element, renderer) {
+                    return true;
+                }
+            };
 
-              doc.save('Generated.pdf');
-           }
-     </script>  
+            doc.fromHTML($('p.resultado').get(0), 15, 15, {
+                'width': 170,
+                'elementHandlers': specialElementHandlers
+            });
+
+            doc.save('Generated.pdf');
+        }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+
 </body>
 
 </html>
