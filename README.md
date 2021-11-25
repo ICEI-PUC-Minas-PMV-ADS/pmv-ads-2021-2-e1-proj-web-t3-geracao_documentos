@@ -14,7 +14,6 @@ O objetivo geral é o desenvolvimento de uma plataforma digital que capacite o u
 
 * Ana Paula Buchholz
 * Andressa Cristina Lemes 
-* Douglas da Costa Santos 
 * Filipe Marques Martins Pascoal 
 * Raphael Garcez Cordeiro Soares 
 
