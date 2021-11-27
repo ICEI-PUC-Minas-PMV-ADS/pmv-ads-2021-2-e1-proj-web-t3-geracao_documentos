@@ -49,7 +49,8 @@ RF11|O site deve oferecer uma funcionalidade de filtro/pesquisa para permitir ao
 RF12|O site deve apresentar, para cada categoria de documento, uma imagem e/ou cor específica |Média| 
 RF13|O site deve possibilitar, para cada categoria de documento, uma ideia de template pronto para ser criado.|Alta|
 RF14|O site deve possibilitar a opção de corrigir documentos concluídos. |Alta| 
-
+RF15|O site deve possibilitar o preenchimento dos campos para edição dos documentos |Alta|
+RF16|O site deve possibilitar a geração do documento em PDF |Alta|
 ### Requisitos não Funcionais
 
 A tabela a seguir apresenta os requisitos não funcionais que o projeto deverá atender.
