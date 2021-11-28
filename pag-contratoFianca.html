@@ -28,7 +28,7 @@
 
     <div class="forms1">
         <div class="forms2">
-            <form class="row g-3">
+            <div class="row g-3">
                 <div><b>DADOS DO FIADOR</b></div>
                 <div class="col-md-4">
                     <label class="form-label">Nome</label><br>
@@ -139,12 +139,12 @@
                 <div class="col-md-12">
                     <button class="btn btn-light btn-pdf" id="getPDF">Gerar Documento</button>
                 </div>
-            </form>
+            </div>
         </div>
     </div>
     <br>
 
-    <p class="resultado">
+    <p class="resultado"  id="resultado">
         CONTRATO DE FIANÇA<br><br>
         As partes deste contrato são aquelas qualificadas a seguir:<br><br>
         FIADOR: <a id="res_nomefiador"></a>, <a id="res_nacfiador"></a>, <a id="res_estcivfiador"></a>, <a
@@ -296,29 +296,29 @@
                 $("#form_cpfcred").text($("#cpfcred").val());
                 $("#form_rgcred").text($("#rgcred").val());
                 $("#form_endcred").text($("#endcred").val());
-            }
+                var element = document.getElementById('resultado');
+                  
+                  var opt = {
+                     margin: 1,
+                     filename: 'contratofianca.pdf',
+                     image: { type: 'jpeg', quality: 0.98 },
+                     html2canvas: { scale: 2 },
+                     jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
+                  };
+      
+                  // New Promise-based usage:
+                  html2pdf().set(opt).from(element).save();
+      
+                  // Old monolithic-style usage:
+                  html2pdf(element, opt);
+               }
+               else 
+               {
+                  alert("Ops! Algum campo ficou em branco! Preencha todo o formulário.")
+               }
+            })
+            });
 
-            else {
-                alert("Ops! Algum campo ficou em branco! Preencha todo o formulário.")
-            }
-        });
-
-        $(".btn-pdf").click(function () {
-            var element = document.getElementById('forms1');
-            var opt =
-
-            {
-                margin: 1,
-                filename: 'contratofianca.pdf',
-                image: { type: 'jpeg', quality: 0.98 },
-                html2canvas: { scale: 2 },
-                jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
-            };
-
-            html2pdf().set(opt).from(element).save();
-            html2pdf(element, opt);
-        })
-    });
 
 </script>
 
