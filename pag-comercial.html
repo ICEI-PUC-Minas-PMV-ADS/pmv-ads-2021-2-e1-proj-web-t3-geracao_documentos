@@ -33,93 +33,93 @@
 
    <div class="forms1">
       <div class="forms2">
-         <form class="row g-3">
+         <div class="row g-3">
 
             <div class="col-md-4">
                <label class="form-label">Empresa</label><br>
-               <input type="text" class="form-control" name="empresa" id="empresa">
+               <input type="text" class="form-control" name="empresa" id="empresa" required>
             </div>
 
             <div class="col-md-4">
                <label class="form-label">CNPJ da empresa</label><br>
-               <input type="text" class="form-control" name="cnpjDaEmpresa" id="cnpjDaEmpresa">
+               <input type="text" class="form-control" name="cnpjDaEmpresa" id="cnpjDaEmpresa" required>
             </div>
 
             <div class="col-md-4">
                <label class="form-label">Endereço da empresa</label><br>
-               <input type="text" class="form-control" name="enderecoEmpresa" id="enderecoEmpresa">
+               <input type="text" class="form-control" name="enderecoEmpresa" id="enderecoEmpresa" required>
             </div>
 
             <div class="col-md-4">
                <label class="form-label">Telefone da empresa</label><br>
-               <input type="number" class="form-control" name="telefoneEmpresa" id="telefoneEmpresa">
+               <input type="number" class="form-control" name="telefoneEmpresa" id="telefoneEmpresa" required>
             </div>
 
             <div class="col-md-4">
                <label class="form-label">Email da empresa</label><br>
-               <input type="email" class="form-control" name="emailEmpresa" id="emailEmpresa">
+               <input type="email" class="form-control" name="emailEmpresa" id="emailEmpresa" required>
             </div>
 
             <div class="col-md-4">
                <label class="form-label">Pagador</label><br>
-               <input type="text" class="form-control" name="pagador" id="pagador">
+               <input type="text" class="form-control" name="pagador" id="pagador" required>
             </div>
 
             <div class="col-md-4">
                <label class="form-label">CPF/CNPJ do pagador</label><br>
-               <input type="text" class="form-control" name="cpfCnpjDoPagador" id="cpfCnpjDoPagador">
+               <input type="text" class="form-control" name="cpfCnpjDoPagador" id="cpfCnpjDoPagador" required>
             </div>
 
             <div class="col-md-4">
                <label class="form-label">Endereço do pagador</label><br>
-               <input type="text" class="form-control" name="enderecoDoPagador" id="enderecoDoPagador">
+               <input type="text" class="form-control" name="enderecoDoPagador" id="enderecoDoPagador" required>
             </div>
 
             <div class="col-md-4">
                <label class="form-label">Telefone do pagador</label><br>
-               <input type="number" class="form-control" name="telefonePagador" id="telefonePagador">
+               <input type="number" class="form-control" name="telefonePagador" id="telefonePagador" required>
             </div>
 
             <div class="col-md-4">
                <label class="form-label">Email do pagador</label><br>
-               <input type="email" class="form-control" name="emailPagador" id="emailPagador">
+               <input type="email" class="form-control" name="emailPagador" id="emailPagador" required>
             </div>
 
             <div class="col-md-4">
                <label class="form-label">Valor total</label><br>
-               <input type="number" class="form-control" name="valor" id="valor">
+               <input type="number" class="form-control" name="valor" id="valor" required>
             </div>
 
             <div class="col-md-4">
                <label class="form-label">Descrição</label><br>
-               <input type="text" class="form-control" name="descricao" id="descricao">
+               <input type="text" class="form-control" name="descricao" id="descricao" required>
             </div>
 
             <div class="col-md-4">
                <label class="form-label">Data de vencimento</label><br>
-               <input type="number" class="form-control" name="vencimento" id="vencimento">
+               <input type="number" class="form-control" name="vencimento" id="vencimento" required>
             </div>
             
             <div class="col-md-4">
                <label class="form-label">Data de emissão</label><br>
-               <input type="number" class="form-control" name="data" id="data">
+               <input type="number" class="form-control" name="data" id="data" required>
             </div>
 
             <div class="col-md-4">
                <label class="form-label">Código da fatura</label><br>
-               <input type="text" class="form-control" name="codigoFatura" id="codigoFatura">
+               <input type="text" class="form-control" name="codigoFatura" id="codigoFatura" required>
             </div>
 
 
             <div class="col-md-12">
                <button class="btn btn-light btn-pdf" id="getPDF">Gerar Documento</button>
             </div>
-         </form>
+         </div>
       </div>
    </div>
 
    <br>
-   <p class="resultado">
+   <p class="resultado"  id="resultado">
       Fatura<br><br>
 
       A empresa <a id="res_empresa"></a> localizada em <a id="res_enderecoEmpresa"></a> vem por meio desta nota outorgar a fatura para: <a id="res_pagador"></a>
@@ -223,30 +223,28 @@
             $("#form_vencimento").text($("#vencimento").val());
             $("#form_data").text($("#data").val());
             $("#form_codigoFatura").text($("#codigoFatura").val());
-         }
-         else 
-         {
-            
-            alert("Ops! Algum campo ficou em branco! Preencha todo o formulário.");
-         }
-      });
-      $(".btn-pdf").click(function () {
-         var element = document.getElementById('forms1');
-         var opt = {
-            margin: 1,
-            filename: 'faturacomercial.pdf',
-            image: { type: 'jpeg', quality: 0.98 },
-            html2canvas: { scale: 2 },
-            jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
-         };
-
-         // New Promise-based usage:
-         html2pdf().set(opt).from(element).save();
-
-         // Old monolithic-style usage:
-         html2pdf(element, opt);
-      })
-   });
+            var element = document.getElementById('resultado');
+                  
+                  var opt = {
+                     margin: 1,
+                     filename: 'contratofianca.pdf',
+                     image: { type: 'jpeg', quality: 0.98 },
+                     html2canvas: { scale: 2 },
+                     jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
+                  };
+      
+                  // New Promise-based usage:
+                  html2pdf().set(opt).from(element).save();
+      
+                  // Old monolithic-style usage:
+                  html2pdf(element, opt);
+               }
+               else 
+               {
+                  alert("Ops! Algum campo ficou em branco! Preencha todo o formulário.")
+               }
+            })
+         });
 
 </script>
 
