@@ -12,6 +12,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.4.1/jspdf.debug.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/2.3.4/jspdf.plugin.autotable.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.4.1/jspdf.debug.js"
+     integrity="sha384-THVO/sM0mFD9h7dfSndI6TS0PgAGavwKvB5hAxRRvc0o9cPLohB0wb/PTA7LdUHs" 
+     crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -28,81 +32,81 @@
 
     <div class="forms1">
         <div class="forms2">
-            <form class="row g-3">
+            <div class="row g-3">
 
                 <div class="col-md-4">
                     <label class="form-label">Outorgante</label><br>
-                    <input type="text" class="form-control" name="outorgante" id="outorgante">
+                    <input type="text" class="form-control" name="outorgante" id="outorgante" required>
                 </div>
 
                 <div class="col-md-4">
                     <label class="form-label">CPF Outorgante</label><br>
-                    <input type="text" class="form-control" name="cpfoutorgante" id="cpfoutorgante">
+                    <input type="text" class="form-control" name="cpfoutorgante" id="cpfoutorgante" required>
                 </div>
 
                 <div class="col-md-4">
                     <label class="form-label">Nacionalidade</label><br>
-                    <input type="text" class="form-control" name="nacionalidade" id="nacionalidade">
+                    <input type="text" class="form-control" name="nacionalidade" id="nacionalidade" required>
                 </div>
 
                 <div class="col-md-4">
                     <label class="form-label">Estado Civil</label><br>
-                    <input type="text" class="form-control" name="estadocivil" id="estadocivil">
+                    <input type="text" class="form-control" name="estadocivil" id="estadocivil" required>
                 </div>
 
                 <div class="col-md-4">
                     <label class="form-label">Profissão</label><br>
-                    <input type="text" class="form-control" name="profissao" id="profissao">
+                    <input type="text" class="form-control" name="profissao" id="profissao" required>
                 </div>
 
                 <div class="col-md-4">
                     <label class="form-label">E-mail</label><br>
-                    <input type="email" class="form-control" name="email" id="email">
+                    <input type="email" class="form-control" name="email" id="email" required>
                 </div>
 
                 <div class="col-md-4">
                     <label class="form-label">Rua</label><br>
-                    <input type="text" class="form-control" name="rua" id="rua">
+                    <input type="text" class="form-control" name="rua" id="rua" required>
                 </div>
 
                 <div class="col-md-4">
                     <label class="form-label">N°</label><br>
-                    <input type="number" class="form-control" name="numero" id="numero">
+                    <input type="number" class="form-control" name="numero" id="numero" required>
                 </div>
 
                 <div class="col-md-4">
                     <label class="form-label">Bairro</label><br>
-                    <input type="text" class="form-control" name="bairro" id="bairro">
+                    <input type="text" class="form-control" name="bairro" id="bairro" required>
                 </div>
 
                 <div class="col-md-4">
                     <label class="form-label">Cidade</label><br>
-                    <input type="text" class="form-control" name="cidade" id="cidade">
+                    <input type="text" class="form-control" name="cidade" id="cidade" required>
                 </div>
 
                 <div class="col-md-4">
                     <label class="form-label">CEP</label><br>
-                    <input type="text" class="form-control" name="cepoutorgante" id="cepoutorgante">
+                    <input type="text" class="form-control" name="cepoutorgante" id="cepoutorgante" required>
                 </div>
 
                 <div class="col-md-4">
                     <label class="form-label">Local</label><br>
-                    <input type="text" class="form-control" name="local" id="local">
+                    <input type="text" class="form-control" name="local" id="local" required>
                 </div>
 
                 <div class="col-md-4">
                     <label class="form-label">Data</label><br>
-                    <input type="text" class="form-control" name="data" id="data">
+                    <input type="text" class="form-control" name="data" id="data" required>
                 </div>
 
                 <div class="col-md-12">
                     <button class="btn btn-light btn-pdf" id="getPDF">Gerar Documento</button>
                 </div>
 
-            </form>
+            </div>
         </div>
     </div>
-    <p class="resultado">
+    <p class="resultado"  id="resultado">
         Procuração Judicial<br><br>
 
         Eu, <a id="res_outorgante"></a> inscrito no CPF nº <a id="res_cpfoutorgante"></a> <a id="res_nacionalidade"></a>
@@ -215,29 +219,29 @@
                 $("#form_cepoutorgante").text($("#cepoutorgante").val());
                 $("#form_local").text($("#local").val());
                 $("#form_data").text($("#data").val());
-            }
-            else {
-                alert("Ops! Algum campo ficou em branco! Preencha todo o formulário.")
-            }
-        });
+                var element = document.getElementById('resultado');
+                  
+                  var opt = {
+                     margin: 1,
+                     filename: 'contratofianca.pdf',
+                     image: { type: 'jpeg', quality: 0.98 },
+                     html2canvas: { scale: 2 },
+                     jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
+                  };
+      
+                  // New Promise-based usage:
+                  html2pdf().set(opt).from(element).save();
+      
+                  // Old monolithic-style usage:
+                  html2pdf(element, opt);
+               }
+               else 
+               {
+                  alert("Ops! Algum campo ficou em branco! Preencha todo o formulário.")
+               }
+            })
+            });
 
-        $(".btn-pdf").click(function () {
-            var element = document.getElementById('forms1');
-            var opt = {
-                margin: 1,
-                filename: 'contratofianca.pdf',
-                image: { type: 'jpeg', quality: 0.98 },
-                html2canvas: { scale: 2 },
-                jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
-            };
-
-            // New Promise-based usage:
-            html2pdf().set(opt).from(element).save();
-
-            // Old monolithic-style usage:
-            html2pdf(element, opt);
-        })
-    });
 
 </script>
 
