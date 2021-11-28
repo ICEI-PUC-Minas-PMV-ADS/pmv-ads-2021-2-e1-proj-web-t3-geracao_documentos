@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pesquisar Documento</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.4.1/jspdf.debug.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/2.3.4/jspdf.plugin.autotable.min.js"></script>
+</head>
+
+<body>
+
+    <div>
+        <header class="o-cabecalho">
+            <a href="index.html"><img src="img/1 (1).png" alt="imagem_logo"></a>
+    </div>
+
+    <div class="texto-modalidade">
+        <h2 class="textcard">Aluguel</h2>
+        <h3 class="textcard">Contrato Fiança</h3>
+    </div>
+
+    <div class="forms1">
+        <div class="forms2">
+            <form class="row g-3">
+                <div><b>DADOS DO FIADOR</b></div>
+                <div class="col-md-4">
+                    <label class="form-label">Nome</label><br>
+                    <input type="text" class="form-control" name="nomefiador" id="nomefiador" required>
+                </div>
+                <div class="col-md-4">
+                    <label class="form-label">Nacionalidade</label><br>
+                    <input type="text" class="form-control" name="nacfiador" id="nacfiador" required>
+                </div>
+                <div class="col-md-4">
+                    <label class="form-label">Estado Civil</label><br>
+                    <input type="text" class="form-control" name="estcivfiador" id="estcivfiador" required>
+                </div>
+                <div class="col-md-4">
+                    <label class="form-label">Profissão</label><br>
+                    <input type="text" class="form-control" name="proffiador" id="proffiador" required>
+                </div>
+                <div class="col-md-4">
+                    <label class="form-label">CPF</label><br>
+                    <input type="number" class="form-control" name="cpffiador" id="cpffiador" required>
+                </div>
+                <div class="col-md-4">
+                    <label class="form-label">RG</label><br>
+                    <input type="text" class="form-control" name="rgfiador" id="rgfiador" required>
+                </div>
+                <div class="col-12">
+                    <label class="form-label">Endereço Completo</label><br>
+                    <input type="text" class="form-control" name="endfiador" id="endfiador" required>
+                </div>
+                <hr>
+                <div><b>DADOS DO FIANÇADO</b></div>
+                <div class="col-md-4">
+                    <label class="form-label">Nome</label><br>
+                    <input type="text" class="form-control" name="nomefianc" id="nomefianc" required>
+                </div>
+                <div class="col-md-4">
+                    <label class="form-label">Nacionalidade</label><br>
+                    <input type="text" class="form-control" name="nacfianc" id="nacfianc" required>
+                </div>
+                <div class="col-md-4">
+                    <label class="form-label">Estado Civil</label><br>
+                    <input type="text" class="form-control" name="estcivfianc" id="estcivfianc" required>
+                </div>
+                <div class="col-md-4">
+                    <label class="form-label">Profissão</label><br>
+                    <input type="text" class="form-control" name="proffianc" id="proffianc" required>
+                </div>
+                <div class="col-md-4">
+                    <label class="form-label">CPF</label><br>
+                    <input type="number" class="form-control" name="cpffianc" id="cpffianc" required>
+                </div>
+                <div class="col-md-4">
+                    <label class="form-label">RG</label><br>
+                    <input type="text" class="form-control" name="rgfianc" id="rgfianc" required>
+                </div>
+                <div class="col-12">
+                    <label class="form-label">Endereço Completo</label><br>
+                    <input type="text" class="form-control" name="endfianc" id="endfianc" required>
+                </div>
+                <hr>
+                <div><b>DADOS DO CREDOR</b></div>
+                <div class="col-md-4">
+                    <label class="form-label">Nome</label><br>
+                    <input type="text" class="form-control" name="nomecred" id="nomecred" required>
+                </div>
+                <div class="col-md-4">
+                    <label class="form-label">Nacionalidade</label><br>
+                    <input type="text" class="form-control" name="naccred" id="naccred" required>
+                </div>
+                <div class="col-md-4">
+                    <label class="form-label">Estado Civil</label><br>
+                    <input type="text" class="form-control" name="estcivcred" id="estcivcred" required>
+                </div>
+                <div class="col-md-4">
+                    <label class="form-label">Profissão</label><br>
+                    <input type="text" class="form-control" name="profcred" id="profcred" required>
+                </div>
+                <div class="col-md-4">
+                    <label class="form-label">CPF</label><br>
+                    <input type="number" class="form-control" name="cpfcred" id="cpfcred" required>
+                </div>
+                <div class="col-md-4">
+                    <label class="form-label">RG</label><br>
+                    <input type="text" class="form-control" name="rgcred" id="rgcred" required>
+                </div>
+                <div class="col-12">
+                    <label class="form-label">Endereço Completo</label><br>
+                    <input type="text" class="form-control" name="endcred" id="endcred" required>
+                </div>
+                <hr>
+                <div class="col-md-6">
+                    <label class="form-label">Município do Foro (para dirimir questões relativas a este
+                        contrato)</label><br>
+                    <input type="text" class="form-control" name="munic" id="munic" required>
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label">UF do Foro (para dirimir questões relativas a este contrato)</label><br>
+                    <input type="text" class="form-control" name="uf" id="uf" required>
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label">Local</label><br>
+                    <input type="text" class="form-control" name="local" id="local" required>
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label">Data</label><br>
+                    <input type="text" class="form-control" name="data" id="data" required>
+                </div>
+                <div class="col-md-12">
+                    <button class="btn btn-light btn-pdf" id="getPDF">Gerar Recibo</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <br>
+
+    <p class="resultado">
+        CONTRATO DE FIANÇA<br><br>
+        As partes deste contrato são aquelas qualificadas a seguir:<br><br>
+        FIADOR: <a id="res_nomefiador"></a>, <a id="res_nacfiador"></a>, <a id="res_estcivfiador"></a>, <a
+            id="res_proffiador"></a>, inscrito(a) no CPF sob o nº <a id="res_cpffiador"></a> e no RG nº <a
+            id="res_rgfiador"></a>, residente e domiciliado à <a id="res_endfiador"></a>.<br><br>
+        FIANÇADO: <a id="res_nomefianc"></a>, <a id="res_nacfianc"></a>, <a id="res_estcivfianc"></a>, <a
+            id="res_proffianc"></a>, inscrito(a) no CPF sob o nº <a id="res_cpffianc"></a> e no RG nº <a
+            id="res_rgfianc"></a>, residente e domiciliado à <a id="res_endfianc"></a>.<br><br>
+        CREDOR: <a id="res_nomecred"></a>, <a id="res_naccred"></a>, <a id="res_estcivcred"></a>, <a
+            id="res_profcred"></a>, inscrito(a) no CPF sob o nº <a id="res_cpfcred"></a> e no RG nº <a
+            id="res_rgcred"></a>, residente e domiciliado à <a id="res_endcred"></a>.<br><br>
+        Têm entre si, justo e acertado o presente contrato de fiança que será regido pelas cláusulas a seguir
+        descritas.<br><br>
+
+        Cláusula 1ª. O presente tem como objeto a fiança prestada neste ato pelos FIADOR ao AFIANÇADO, no que diz
+        respeito às obrigações assumidas por este perante o CREDOR decorrente do contrato de (informar), firmado em
+        (data), o qual integra este instrumento.<br><br>
+
+        Cláusula 2ª. As obrigações mencionadas na cláusula anterior, afiançadas pelo FIADOR, envolvem tanto o principal
+        quanto multas, juros e correção decorrentes de eventual inadimplência.<br><br>
+
+        Cláusula 3ª. O FIADOR se obriga subsidiariamente como responsável pelo cumprimento das obrigações mencionadas
+        nas cláusulas anteriores.<br><br>
+
+        Cláusula 4ª. O FIADOR se obriga a comunicar ao CREDOR, por escrito, eventual mudança de endereço.<br><br>
+
+        Cláusula 5ª. O presente contrato passa a vigorar a partir da assinatura das partes.<br><br>
+
+        Cláusula 6ª. Fica eleito o foro da comarca de <a id="res_munic"></a> - <a id="res_uf"></a> para dirimir qualquer
+        questão relativa a este contrato.<br><br>
+
+        E por estarem assim justas e contratadas, as partes assinam o presente contrato em 02 (duas) vias de igual teor
+        e forma, juntamente com duas testemunhas.<br><br>
+
+        Local e Data: <a id="res_local"></a>, <a id="res_data"></a>.<br><br>
+
+        Assinaturas:<br><br>
+
+        Fiador:<br><br>
+        Fiançado:<br><br>
+        Credor:<br><br>
+        Testemunha:<br><br>
+        Testemunha:<br><br>
+
+    </p>
+
+    <br><br>
+
+    <script>
+        $('.forms2 input[name]').each(function () {
+            let input = $(this)
+
+            $(this).on('input', function () {
+                let name = input.attr('name')
+
+                let target = $('#res_' + name)
+
+                let value = input.val()
+
+                if (input.attr('type') == 'number')
+                    value = value.replace('.', ',');
+
+                target.text(value)
+            })
+        })
+
+        function getPDF() {
+            var doc = new jsPDF();
+
+            var specialElementHandlers = {
+                '#getPDF': function (element, renderer) {
+                    return true;
+                },
+                'br': function (element, renderer) {
+                    return true;
+                }
+            };
+
+            doc.fromHTML($('p.resultado').get(0), 15, 15, {
+                'width': 170,
+                'elementHandlers': specialElementHandlers
+            });
+
+            doc.save('Generated.pdf');
+        }
+
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+    integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+    integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+    crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
+    integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"
+    integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+
+    $(document).ready(function () {
+        $(".btn-pdf").click(function () {
+            let nomefiador = $("#nomefiador").val();
+            let nacfiador = $("#nacfiador").val();
+            let estcivfiador = $("#estcivfiador").val();
+            let proffiador = $("#proffiador").val();
+            let cpffiador = $("#cpffiador").val();
+            let rgfiador = $("#rgfiador").val();
+            let endfiador = $("#endfiador").val();
+            let nomefianc = $("#nomefianc").val();
+            let nacfianc = $("#nacfianc").val();
+            let estcivfianc = $("#estcivfianc").val();
+            let proffianc = $("#proffianc").val();
+            let cpffianc = $("#cpffianc").val();
+            let rgfianc = $("#rgfianc").val();
+            let endfianc = $("#endfianc").val();
+            let nomecred = $("#nomecred").val();
+            let naccred = $("#naccred").val();
+            let estcivcred = $("#estcivcred").val();
+            let profcred = $("#profcred").val();
+            let cpfcred = $("#cpfcred").val();
+            let rgcred = $("#rgcred").val();
+            let endcred = $("#endcred").val();
+
+            if (nomefiador !== '' && nacfiador != '' && estcivfiador != '' && proffiador != '' && cpffiador != '' && rgfiador != '' && endfiador != '' && nomefianc !== '' && nacfianc != '' && estcivfianc != '' && proffianc != '' && cpffianc != '' && rgfianc != '' && endfianc != '' && nomecred != '' && naccred != '' && estcivcred != '' && profcred != '' && cpfcred != '' && rgcred != '' && endcred != '') {
+                $("#form_nomefiador").text($("#nomefiador").val());
+                $("#form_nacfiador").text($("#nacfiador").val());
+                $("#form_estcivfiador").text($("#estcivfiador").val());
+                $("#form_proffiador").text($("#proffiador").val());
+                $("#form_cpffiador").text($("#cpffiador").val());
+                $("#form_rgfiador").text($("#rgfiador").val());
+                $("#form_endfiador").text($("#endfiador").val());
+                $("#form_nomefianc").text($("#nomefianc").val());
+                $("#form_nacfianc").text($("#nacfianc").val());
+                $("#form_estcivfianc").text($("#estcivfianc").val());
+                $("#form_proffianc").text($("#proffianc").val());
+                $("#form_cpffianc").text($("#cpffianc").val());
+                $("#form_rgfianc").text($("#rgfianc").val());
+                $("#form_endfianc").text($("#endfianc").val());
+                $("#form_nomecred").text($("#nomecred").val());
+                $("#form_naccred").text($("#naccred").val());
+                $("#form_estcivcred").text($("#estcivcred").val());
+                $("#form_profcred").text($("#profcred").val());
+                $("#form_cpfcred").text($("#cpfcred").val());
+                $("#form_rgcred").text($("#rgcred").val());
+                $("#form_endcred").text($("#endcred").val());
+            }
+
+            else {
+                alert("Ops! Algum campo ficou em branco! Preencha todo o formulário.")
+            }
+        });
+
+        $(".btn-pdf").click(function () {
+            var element = document.getElementById('forms1');
+            var opt =
+
+            {
+                margin: 1,
+                filename: 'contratofianca.pdf',
+                image: { type: 'jpeg', quality: 0.98 },
+                html2canvas: { scale: 2 },
+                jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
+            };
+
+            html2pdf().set(opt).from(element).save();
+            html2pdf(element, opt);
+        })
+    });
+
+</script>
+
+</html>
