@@ -27,64 +27,64 @@
 
    <div class="forms1">
       <div class="forms2">
-         <form class="row g-3">
+         <div class="row g-3">
 
             <div class="col-md-4">
                <label class="form-label">Vendedor</label><br>
-               <input type="text" class="form-control" name="vendedor" id="vendedor">
+               <input type="text" class="form-control" name="vendedor" id="vendedor" required>
             </div>
 
             <div class="col-md-4">
                <label class="form-label">CPF do Vendedor</label><br>
-               <input type="text" class="form-control" name="cpfvendedor" id="cpfvendedo">
+               <input type="text" class="form-control" name="cpfvendedor" id="cpfvendedo" required>
             </div>
 
             <div class="col-md-4">
                <label class="form-label">Cliente</label><br>
-               <input type="text" class="form-control" name="cliente" id="cliente">
+               <input type="text" class="form-control" name="cliente" id="cliente" required>
             </div>
 
             <div class="col-md-4">
                <label class="form-label">CPF do Cliente</label><br>
-               <input type="text" class="form-control" name="cpfcliente" id="cpfcliente">
+               <input type="text" class="form-control" name="cpfcliente" id="cpfcliente" required>
             </div>
 
             <div class="col-md-4">
                <label class="form-label">Valor do recibo</label><br>
-               <input type="number" class="form-control" name="rs" id="rs">
+               <input type="number" class="form-control" name="rs" id="rs" required>
             </div>
 
             <div class="col-md-4">
                <label class="form-label">Valor por extenso</label><br>
-               <input type="text" class="form-control" name="rs_puro" id="rs_puro">
+               <input type="text" class="form-control" name="rs_puro" id="rs_puro" required>
             </div>
 
             <div class="col-md-4">
                <label class="form-label">Serviço</label><br>
-               <input type="text" class="form-control" name="servico" id="servico">
+               <input type="text" class="form-control" name="servico" id="servico" required>
             </div>
 
             <div class="col-md-4">
                <label class="form-label">Local</label><br>
-               <input type="text" class="form-control" name="local" id="local">
+               <input type="text" class="form-control" name="local" id="local" required>
             </div>
 
             <div class="col-md-4">
                <label class="form-label">Data</label><br>
-               <input type="text" class="form-control" name="data" id="data">
+               <input type="text" class="form-control" name="data" id="data" required>
             </div>
 
             <div class="col-md-12">
-               <button class="btn btn-light btn-pdf" id="getPDF">Gerar Documento</button>
+               <button class="btn btn-light btn-pdf" id="getPDF">Gerar Recibo</button>
             </div>
 
-         </form>
+         </div>
 
       </div>
    </div>
 
    <br>
-   <p class="resultado">
+   <p class="resultado"  id="resultado">
       Recibo de Pagamento<br><br>
 
       Eu <a id="res_vendedor"></a> portador(a) do CPF <a id="res_cpfvendedor"></a> declaro que recebi do Sr(a).
@@ -137,10 +137,7 @@
       }
    </script>
 
-   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
-      </script>
-</body>
+
 
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
    integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
@@ -175,30 +172,29 @@
             $("#form_servico").text($("#servico").val());
             $("#form_local").text($("#local").val());
             $("#form_data").text($("#data").val());
-         }
-         else {
-            alert("Ops! Algum campo ficou em branco! Preencha todo o formulário.")
-         }
-      });
-
-      $(".btn-pdf").click(function () {
-         var element = document.getElementById('forms1');
-         var opt = {
-            margin: 1,
-            filename: 'contratofianca.pdf',
-            image: { type: 'jpeg', quality: 0.98 },
-            html2canvas: { scale: 2 },
-            jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
-         };
-
-         // New Promise-based usage:
-         html2pdf().set(opt).from(element).save();
-
-         // Old monolithic-style usage:
-         html2pdf(element, opt);
-      })
+            var element = document.getElementById('resultado');
+                  
+                  var opt = {
+                     margin: 1,
+                     filename: 'contratofianca.pdf',
+                     image: { type: 'jpeg', quality: 0.98 },
+                     html2canvas: { scale: 2 },
+                     jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
+                  };
+      
+                  // New Promise-based usage:
+                  html2pdf().set(opt).from(element).save();
+      
+                  // Old monolithic-style usage:
+                  html2pdf(element, opt);
+               }
+               else 
+               {
+                  alert("Ops! Algum campo ficou em branco! Preencha todo o formulário.")
+               }
+            })
    });
 
 </script>
-
+</body>
 </html>
