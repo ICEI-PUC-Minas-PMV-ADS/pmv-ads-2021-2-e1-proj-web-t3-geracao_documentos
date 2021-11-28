@@ -51,6 +51,8 @@ RF13|O site deve possibilitar, para cada categoria de documento, uma ideia de te
 RF14|O site deve possibilitar a opção de corrigir documentos concluídos. |Alta| 
 RF15|O site deve possibilitar o preenchimento dos campos para edição dos documentos |Alta|
 RF16|O site deve possibilitar a geração do documento no formato PDF |Alta|
+RF17|O site deve informar ao usuário se faltaram campos a serem preenchidos |Alta|
+
 ### Requisitos não Funcionais
 
 A tabela a seguir apresenta os requisitos não funcionais que o projeto deverá atender.
