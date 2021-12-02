@@ -55,6 +55,11 @@ section, h2, p
   transform:rotate(0);
 }
 
+p
+{
+  text-align: justify;
+}
+
 ul, li 
 {
   color: white; 
