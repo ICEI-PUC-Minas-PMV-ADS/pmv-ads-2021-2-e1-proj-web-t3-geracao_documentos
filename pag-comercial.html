@@ -28,7 +28,7 @@
 
    <div class="texto-modalidade">
 
-      <h3>Fatura</h3>
+      <h3 class="tit-doc">Fatura</h3>
    </div>
 
    <div class="forms1">
@@ -118,22 +118,25 @@
       </div>
    </div>
 
-   <br>
-   <p class="resultado"  id="resultado">
-      Fatura<br><br>
+   
+   <div class="resultado"  id="resultado">
 
-      A empresa <a id="res_empresa"></a> localizada em <a id="res_enderecoEmpresa"></a> vem por meio desta nota outorgar a fatura para: <a id="res_pagador"></a>
-       possuinte do CPF/CNPJ(<a id="cpfCnpjDoPagador"></a>) no valor de <a id="res_valor"></a> emitida no dia (<a id="res_data"></a>)
+      <h3>Fatura</h3>
+      <br>
+      
+      <p id="texto-doc2">A empresa <a id="res_empresa"></a> localizada em <a id="res_enderecoEmpresa"></a> vem por meio desta nota outorgar a fatura para: <a id="res_pagador"></a>
+      possuinte do CPF/CNPJ(<a id="cpfCnpjDoPagador"></a>) no valor de <a id="res_valor"></a> emitida no dia (<a id="res_data"></a>)
       com vencimento em (<a id="res_vencimento"></a>). Para mais informações, entre em contato conosco, nosso telefone é: <a id="res_telefoneEmpresa"></a>. Endereço de email: <a id="res_emailEmpresa"></a>.
       
-
-      <br><br>
+      <br>
       Descrição da fatura: <a id="res_descricao"></a>
       <br>Código da fatura: <a id="res_codigoFatura"></a>
       <br> Efetue o pagamento nas datas combinadas para evitar aplicações de juros.
-   </p>
-   <br><br>
-
+      </p>
+      
+   </div>
+   <br>
+   
    <script>
       $('.forms2 input[name]').each(function () {
          let input = $(this)
