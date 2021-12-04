@@ -55,10 +55,6 @@ section, h2, p
   transform:rotate(0);
 }
 
-p
-{
-  text-align: justify;
-}
 
 ul, li 
 {
@@ -69,6 +65,27 @@ ul, li
 div, h2 
 {
   color: white;
+}
+
+h3
+{
+  text-align: center;
+  color: black;
+}
+
+.tit-doc
+{
+  color: white;
+}
+
+.texto-doc .resultado
+{
+  text-align: justify;
+}
+
+#texto-doc2
+{
+  text-align: justify;
 }
 
 .textcategoria
@@ -125,7 +142,6 @@ h1
   font-size: 50px;
   text-align: center;
 }
-
 
 .texto-modalidade
 {
@@ -206,9 +222,7 @@ div .butrecibo
   padding-top: 20px;
   padding-bottom: 20px;
   padding-left: 20px;
-  text-align: start;
   padding-right: 20px;
-  display: inline-block;
 }
 
 .o-rodape 
