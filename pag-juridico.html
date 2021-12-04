@@ -14,8 +14,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/2.3.4/jspdf.plugin.autotable.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.4.1/jspdf.debug.js"
-     integrity="sha384-THVO/sM0mFD9h7dfSndI6TS0PgAGavwKvB5hAxRRvc0o9cPLohB0wb/PTA7LdUHs" 
-     crossorigin="anonymous"></script>
+        integrity="sha384-THVO/sM0mFD9h7dfSndI6TS0PgAGavwKvB5hAxRRvc0o9cPLohB0wb/PTA7LdUHs"
+        crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -27,7 +27,7 @@
 
     <div class="texto-modalidade">
         <h2>Jurídico</h2>
-        <h3>Procuração Judicial</h3>
+        <h3 class="tit-doc">Procuração Judicial</h3>
     </div>
 
     <div class="forms1">
@@ -106,31 +106,34 @@
             </div>
         </div>
     </div>
-    <p class="resultado"  id="resultado">
-        Procuração Judicial<br><br>
 
-        Eu, <a id="res_outorgante"></a> inscrito no CPF nº <a id="res_cpfoutorgante"></a> <a id="res_nacionalidade"></a>
-        <a id="res_estadocivil"></a> <a id="res_profissao"></a>
-        (<a id="res_rs_puro"></a>) <a id="res_email"></a> residente e domiciliado na rua <a id="res_rua"></a>, sob o nº
-        <a id="res_numero"></a>, bairro <a id="res_bairro"></a>
-        , na Cidade de <a id="res_cidade"></a>, CEP nº <a id="res_cepoutorgante"></a> nomeia(m) os outorgados seus
-        procuradores, conferindo-lhes os poderes da cláusula
-        "ad judicia" e "ad extra", conjunta ou separadamente, para representá-lo(s) em juízo ou fora dele,
-        outorgando-lhes ainda os especiais poderes para receber citação,
-        de concordar, acordar, confessar, discordar, desistir, transigir, firmar compromissos, reconhecer a procedência
-        do pedido, renunciar ao direito sobre o qual se funda a ação,
-        receber, dar quitação, executar e fazer cumprir decisões e títulos judiciais e extrajudiciais, receber valores e
-        levantar alvarás judiciais extraídos em nome do outorgante,
-        requerer falências e concordatas, imputar a terceiros, em nome dos outorgantes, fatos descritos como crimes,
-        argüir exceções de suspeição, firmar compromisso e declarar
-        suficiência econômica, constituir preposto, substabelecer com ou sem reserva os poderes conferidos pelo presente
-        mandato. Declara ainda, que tem ciência que o
-        levantamento de créditos decorrentes de precatório ou RPV somente poderá ser efetivado mediante alvará judicial.
-        <br><br>
+        <div class="resultado" id="resultado">
+            <h3>Procuração Judicial</h3>
+            <br>
+            <p id="texto-doc2">Eu, <a id="res_outorgante"></a> inscrito no CPF nº <a id="res_cpfoutorgante"></a> <a
+                    id="res_nacionalidade"></a><a id="res_estadocivil"></a> <a id="res_profissao"></a>(<a
+                    id="res_rs_puro"></a>) <a id="res_email"></a> residente e domiciliado na rua <a id="res_rua"></a>,
+                sob o nº <a id="res_numero"></a>, bairro <a id="res_bairro"></a>, na Cidade de <a id="res_cidade"></a>,
+                CEP nº <a id="res_cepoutorgante"></a> nomeia(m) os outorgados seus procuradores, conferindo-lhes os
+                poderes da cláusula "ad judicia" e "ad extra", conjunta ou separadamente, para representá-lo(s) em juízo
+                ou fora dele, outorgando-lhes ainda os especiais poderes para receber citação, de concordar, acordar,
+                confessar, discordar, desistir, transigir, firmar compromissos, reconhecer a procedência do pedido,
+                renunciar ao direito sobre o qual se funda a ação, receber, dar quitação, executar e fazer cumprir
+                decisões e títulos judiciais e extrajudiciais, receber valores e levantar alvarás judiciais extraídos em
+                nome do outorgante, requerer falências e concordatas, imputar a terceiros, em nome dos outorgantes,
+                fatos descritos como crimes, argüir exceções de suspeição, firmar compromisso e declarar suficiência
+                econômica, constituir preposto, substabelecer com ou sem reserva os poderes conferidos pelo presente
+                mandato. Declara ainda, que tem ciência que o levantamento de créditos decorrentes de precatório ou RPV
+                somente poderá ser efetivado mediante alvará judicial.
+                <br>
 
-        Local e Data: <a id="res_local"></a> em <a id="res_data"></a>.
-    </p>
+                Local e Data: <a id="res_local"></a> em <a id="res_data"></a>.
+            </p>
+        </div>
+    
+
     <br><br>
+
     <script>
         $('.forms2 input[name]').each(function () {
             let input = $(this)
@@ -220,27 +223,26 @@
                 $("#form_local").text($("#local").val());
                 $("#form_data").text($("#data").val());
                 var element = document.getElementById('resultado');
-                  
-                  var opt = {
-                     margin: 1,
-                     filename: 'contratojuridico.pdf',
-                     image: { type: 'jpeg', quality: 0.98 },
-                     html2canvas: { scale: 2 },
-                     jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
-                  };
-      
-                  // New Promise-based usage:
-                  html2pdf().set(opt).from(element).save();
-      
-                  // Old monolithic-style usage:
-                  html2pdf(element, opt);
-               }
-               else 
-               {
-                  alert("Ops! Algum campo ficou em branco! Preencha todo o formulário.")
-               }
-            })
-            });
+
+                var opt = {
+                    margin: 1,
+                    filename: 'contratojuridico.pdf',
+                    image: { type: 'jpeg', quality: 1 },
+                    html2canvas: { scale: 5 },
+                    jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
+                };
+
+                // New Promise-based usage:
+                html2pdf().set(opt).from(element).save();
+
+                // Old monolithic-style usage:
+                html2pdf(element, opt);
+            }
+            else {
+                alert("Ops! Algum campo ficou em branco! Preencha todo o formulário.")
+            }
+        })
+    });
 
 
 </script>
