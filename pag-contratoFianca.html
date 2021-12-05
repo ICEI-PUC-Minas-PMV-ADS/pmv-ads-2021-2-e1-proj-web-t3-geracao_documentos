@@ -21,6 +21,13 @@
             <a href="index.html"><img src="img/1 (1).png" alt="imagem_logo"></a>
     </div>
 
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+           <li class="breadcrumb-item"><a href="pagina-categorias.html">Categorias</a></li>
+           <li class="breadcrumb-item active" aria-current="page">Aluguel</li>
+        </ol>
+     </nav>
+
     <div class="texto-modalidade">
         <h2 class="textcard">Aluguel</h2>
         <h3 class="tit-doc">Contrato Fiança</h3>
@@ -188,13 +195,14 @@
 
             Local e Data: <a id="res_local"></a>, <a id="res_data"></a>.<br><br>
 
-            Assinaturas:<br><br>
+            <b>Assinaturas</b><br><br>
 
-            Fiador:<br><br>
-            Fiançado:<br><br>
-            Credor:<br><br>
-            Testemunha:<br><br>
-            Testemunha:<br><br>
+            Fiador: _____________________________________<br><br>
+            Fiançado: ___________________________________<br><br>
+            Credor: _____________________________________<br><br>
+            Testemunha: _________________________________<br><br>
+            Testemunha:__________________________________<br><br>
+            
         </p>
     </div>
 
@@ -239,25 +247,14 @@
         }
 
     </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-        crossorigin="anonymous"></script>
-</body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
-    integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
-    crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
-    integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
-    crossorigin="anonymous"></script>
-<script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
-    integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"
-    integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script>
-
-    $(document).ready(function () {
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script>
+        
         $(".btn-pdf").click(function () {
             let nomefiador = $("#nomefiador").val();
             let nacfiador = $("#nacfiador").val();
@@ -303,29 +300,23 @@
                 $("#form_cpfcred").text($("#cpfcred").val());
                 $("#form_rgcred").text($("#rgcred").val());
                 $("#form_endcred").text($("#endcred").val());
-                var element = document.getElementById('resultado');
 
-                var opt = {
-                    margin: 1,
-                    filename: 'contratofianca.pdf',
-                    image: { type: 'jpeg', quality: 0.98 },
-                    html2canvas: { scale: 2 },
-                    jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
-                };
-
-                // New Promise-based usage:
-                html2pdf().set(opt).from(element).save();
-
-                // Old monolithic-style usage:
-                html2pdf(element, opt);
+                var html = document.getElementById('resultado').innerHTML;
+                var divContents = $("#dvContainer").html()
+                var win = window.open('', 'Contrato', 'height=400,width=800')
+                win.document.write('<html><head>')
+                win.document.write('<link rel="stylesheet" href="style.css"></head>')
+                win.document.write('<body class="print" onload="print()"><div style="height:400px;">')
+                win.document.write(html)
+                win.document.write('</div>')
+                win.document.write('</body></html>')
+                win.document.close()
             }
             else {
                 alert("Ops! Algum campo ficou em branco! Preencha todo o formulário.")
             }
         })
-    });
-
-
-</script>
+    </script>
+</body>
 
 </html>
