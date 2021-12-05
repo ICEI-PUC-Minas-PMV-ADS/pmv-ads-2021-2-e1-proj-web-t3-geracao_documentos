@@ -25,6 +25,13 @@
             <a href="index.html"><img src="img/1 (1).png" alt="imagem_logo"></a>
     </div>
 
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+           <li class="breadcrumb-item"><a href="pagina-categorias.html">Categorias</a></li>
+           <li class="breadcrumb-item active" aria-current="page">Jurídico</li>
+        </ol>
+     </nav>
+
     <div class="texto-modalidade">
         <h2>Jurídico</h2>
         <h3 class="tit-doc">Procuração Judicial</h3>
@@ -61,7 +68,7 @@
 
                 <div class="col-md-4">
                     <label class="form-label">E-mail</label><br>
-                    <input type="email" class="form-control" name="email" id="email" required>
+                    <input type="text" class="form-control" name="email" id="email" required>
                 </div>
 
                 <div class="col-md-4">
@@ -71,7 +78,7 @@
 
                 <div class="col-md-4">
                     <label class="form-label">N°</label><br>
-                    <input type="number" class="form-control" name="numero" id="numero" required>
+                    <input type="text" class="form-control" name="numero" id="numero" required>
                 </div>
 
                 <div class="col-md-4">
@@ -110,24 +117,25 @@
         <div class="resultado" id="resultado">
             <h3>Procuração Judicial</h3>
             <br>
-            <p id="texto-doc2">Eu, <a id="res_outorgante"></a> inscrito no CPF nº <a id="res_cpfoutorgante"></a> <a
-                    id="res_nacionalidade"></a><a id="res_estadocivil"></a> <a id="res_profissao"></a>(<a
-                    id="res_rs_puro"></a>) <a id="res_email"></a> residente e domiciliado na rua <a id="res_rua"></a>,
+
+            <p id="texto-doc2">
+                
+                Eu, <a id="res_outorgante"></a>, inscrito no CPF nº <a id="res_cpfoutorgante"></a>, <a
+                    id="res_nacionalidade"></a>, <a id="res_estadocivil"></a>, <a id="res_profissao"></a>,<a id="res_email"></a>, residente e domiciliado(a) na rua <a id="res_rua"></a>, 
                 sob o nº <a id="res_numero"></a>, bairro <a id="res_bairro"></a>, na Cidade de <a id="res_cidade"></a>,
-                CEP nº <a id="res_cepoutorgante"></a> nomeia(m) os outorgados seus procuradores, conferindo-lhes os
-                poderes da cláusula "ad judicia" e "ad extra", conjunta ou separadamente, para representá-lo(s) em juízo
-                ou fora dele, outorgando-lhes ainda os especiais poderes para receber citação, de concordar, acordar,
-                confessar, discordar, desistir, transigir, firmar compromissos, reconhecer a procedência do pedido,
-                renunciar ao direito sobre o qual se funda a ação, receber, dar quitação, executar e fazer cumprir
-                decisões e títulos judiciais e extrajudiciais, receber valores e levantar alvarás judiciais extraídos em
-                nome do outorgante, requerer falências e concordatas, imputar a terceiros, em nome dos outorgantes,
-                fatos descritos como crimes, argüir exceções de suspeição, firmar compromisso e declarar suficiência
-                econômica, constituir preposto, substabelecer com ou sem reserva os poderes conferidos pelo presente
-                mandato. Declara ainda, que tem ciência que o levantamento de créditos decorrentes de precatório ou RPV
-                somente poderá ser efetivado mediante alvará judicial.
+                CEP nº <a id="res_cepoutorgante"></a>, nomeio os outorgados seus procuradores, conferindo-lhes os
+                poderes da cláusula "ad judicia" e "ad extra", conjunta ou separadamente, para representá-lo(s) em juízo ou fora dele, outorgando-lhes ainda os especiais poderes para receber citação, de concordar, acordar, confessar, discordar, desistir, transigir, firmar compromissos, reconhecer a procedência do pedido, renunciar ao direito sobre o qual se funda a ação, receber, dar quitação, executar e fazer cumprir decisões e títulos judiciais e extrajudiciais, receber valores e levantar alvarás judiciais extraídos em nome do outorgante, requerer falências e concordatas, imputar a terceiros, em nome dos outorgantes, fatos descritos como crimes, argüir exceções de suspeição, firmar compromisso e declarar suficiência econômica, constituir preposto, substabelecer com ou sem reserva os poderes conferidos pelo presente mandato. 
+                <br>
+                <br>
+                Declara ainda, que tem ciência que o levantamento de créditos decorrentes de precatório ou RPV somente poderá ser efetivado mediante alvará judicial.
+                <br>
                 <br>
 
-                Local e Data: <a id="res_local"></a> em <a id="res_data"></a>.
+                Local e Data: <a id="res_local"></a>, <a id="res_data"></a>.
+                <br>
+                <br>
+                <br>
+                <b>Assinatura:</b>________________________________________________
             </p>
         </div>
     
@@ -222,21 +230,17 @@
                 $("#form_cepoutorgante").text($("#cepoutorgante").val());
                 $("#form_local").text($("#local").val());
                 $("#form_data").text($("#data").val());
-                var element = document.getElementById('resultado');
 
-                var opt = {
-                    margin: 1,
-                    filename: 'contratojuridico.pdf',
-                    image: { type: 'jpeg', quality: 1 },
-                    html2canvas: { scale: 5 },
-                    jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
-                };
-
-                // New Promise-based usage:
-                html2pdf().set(opt).from(element).save();
-
-                // Old monolithic-style usage:
-                html2pdf(element, opt);
+               var html = document.getElementById('resultado').innerHTML;
+               var divContents = $("#dvContainer").html()
+               var win = window.open('', 'Contrato', 'height=400,width=800')
+               win.document.write('<html><head>')
+               win.document.write('<link rel="stylesheet" href="style.css"></head>')
+               win.document.write('<body class="print" onload="print()"><div style="height:400px;">')
+               win.document.write(html)
+               win.document.write('</div>')
+               win.document.write('</body></html>')
+               win.document.close()
             }
             else {
                 alert("Ops! Algum campo ficou em branco! Preencha todo o formulário.")
