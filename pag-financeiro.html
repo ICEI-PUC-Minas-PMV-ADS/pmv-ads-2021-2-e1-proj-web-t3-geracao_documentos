@@ -20,6 +20,13 @@
          <a href="index.html"><img src="img/1 (1).png" alt="imagem_logo"></a>
    </div>
 
+   <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+         <li class="breadcrumb-item"><a href="pagina-categorias.html">Categorias</a></li>
+         <li class="breadcrumb-item active" aria-current="page">Financeiro</li>
+      </ol>
+   </nav>
+
    <div class="texto-modalidade">
       <h2 class="textcard">Financeiro</h2>
       <h3 class="tit-doc">Recibo de Pagamento</h3>
@@ -84,19 +91,26 @@
    </div>
 
    <br>
-   <div class="resultado"  id="resultado">
+   <div class="resultado" id="resultado">
 
       <h3>Recibo de Pagamento</h3>
       <br>
-      
-      <p id="texto-doc2">Eu <a id="res_vendedor"></a> portador(a) do CPF <a id="res_cpfvendedor"></a> declaro que recebi do Sr(a).
-      <a id="res_cliente"></a> brasileiro(a) cujo CPF é <a id="res_cpfcliente"></a>, a quantia de R$ <a id="res_rs"></a>
-      (<a id="res_rs_puro"></a>),
-      referente a: <a id="res_servico"></a>, dando-lhe por este recibo a devida quitação.
 
-      <br><br>
+      <p id="texto-doc2">Eu, <a id="res_vendedor"></a>, portador(a) do CPF <a id="res_cpfvendedor"></a>, declaro que recebi
+         do Sr(a).
+         <a id="res_cliente"></a>, brasileiro(a), CPF <a id="res_cpfcliente"></a>, a quantia de R$ <a
+            id="res_rs"></a>
+         (<a id="res_rs_puro"></a>),
+         referente a: <a id="res_servico"></a>, dando-lhe por este recibo a devida quitação.
 
-      Local e Data: <a id="res_local"></a>, <a id="res_data"></a>.
+         <br><br>
+
+         Local e Data: <a id="res_local"></a>, <a id="res_data"></a>.
+         <br>
+         <br>
+         <br>
+         <br>
+         <b>Assinatura:</b>___________________________________________
       </p>
 
    </div>
@@ -143,62 +157,60 @@
 
 
 
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
-   integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
-   integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
-<script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
-   integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"
-   integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg=="
-   crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script>
+   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+      integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+      crossorigin="anonymous"></script>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+      integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+      crossorigin="anonymous"></script>
+   <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
+      integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"
+      integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg=="
+      crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+   <script>
 
-   $(document).ready(function () {
-      $(".btn-pdf").click(function () {
-         let vendedor = $("#vendedor").val();
-         let cpfvendedo = $("#cpfvendedo").val();
-         let cliente = $("#cliente").val();
-         let cpfcliente = $("#cpfcliente").val();
-         let rs = $("#rs").val();
-         let rs_puro = $("#rs_puro").val();
-         let servico = $("#servico").val();
-         let local = $("#local").val();
-         let data = $("#data").val();
+      $(document).ready(function () {
+         $(".btn-pdf").click(function () {
+            let vendedor = $("#vendedor").val();
+            let cpfvendedo = $("#cpfvendedo").val();
+            let cliente = $("#cliente").val();
+            let cpfcliente = $("#cpfcliente").val();
+            let rs = $("#rs").val();
+            let rs_puro = $("#rs_puro").val();
+            let servico = $("#servico").val();
+            let local = $("#local").val();
+            let data = $("#data").val();
 
-         if (vendedor !== '' && cpfvendedo != '' && cliente != '' && cpfcliente != '' && rs != '' && rs_puro != '' && servico != '' && local !== '' && data != '') {
-            $("#form_vendedor").text($("#vendedor").val());
-            $("#form_cpfvendedo").text($("#cpfvendedo").val());
-            $("#form_cliente").text($("#cliente").val());
-            $("#form_cpfcliente").text($("#cpfcliente").val());
-            $("#form_rs").text($("#rs").val());
-            $("#form_rs_puro").text($("#rs_puro").val());
-            $("#form_servico").text($("#servico").val());
-            $("#form_local").text($("#local").val());
-            $("#form_data").text($("#data").val());
-            var element = document.getElementById('resultado');
-                  
-                  var opt = {
-                     margin: 1,
-                     filename: 'contratofinanceiro.pdf',
-                     image: { type: 'jpeg', quality: 0.98 },
-                     html2canvas: { scale: 2 },
-                     jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
-                  };
-      
-                  // New Promise-based usage:
-                  html2pdf().set(opt).from(element).save();
-      
-                  // Old monolithic-style usage:
-                  html2pdf(element, opt);
-               }
-               else 
-               {
-                  alert("Ops! Algum campo ficou em branco! Preencha todo o formulário.")
-               }
-            })
-   });
+            if (vendedor !== '' && cpfvendedo != '' && cliente != '' && cpfcliente != '' && rs != '' && rs_puro != '' && servico != '' && local !== '' && data != '') {
+               $("#form_vendedor").text($("#vendedor").val());
+               $("#form_cpfvendedo").text($("#cpfvendedo").val());
+               $("#form_cliente").text($("#cliente").val());
+               $("#form_cpfcliente").text($("#cpfcliente").val());
+               $("#form_rs").text($("#rs").val());
+               $("#form_rs_puro").text($("#rs_puro").val());
+               $("#form_servico").text($("#servico").val());
+               $("#form_local").text($("#local").val());
+               $("#form_data").text($("#data").val());
 
-</script>
+               var html = document.getElementById('resultado').innerHTML;
+               var divContents = $("#dvContainer").html()
+               var win = window.open('', 'Contrato', 'height=400,width=800')
+               win.document.write('<html><head>')
+               win.document.write('<link rel="stylesheet" href="style.css"></head>')
+               win.document.write('<body class="print" onload="print()"><div style="height:400px;">')
+               win.document.write(html)
+               win.document.write('</div>')
+               win.document.write('</body></html>')
+               win.document.close()
+            }
+            else {
+               alert("Ops! Algum campo ficou em branco! Preencha todo o formulário.")
+            }
+         })
+      });
+
+   </script>
 </body>
+
 </html>
