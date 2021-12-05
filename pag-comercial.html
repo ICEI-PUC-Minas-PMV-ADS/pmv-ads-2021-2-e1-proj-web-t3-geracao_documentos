@@ -21,6 +21,13 @@
          <a href="index.html"><img src="img/1 (1).png" alt="imagem_logo"></a>
    </div>
 
+   <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+         <li class="breadcrumb-item"><a href="pagina-categorias.html">Categorias</a></li>
+         <li class="breadcrumb-item active" aria-current="page">Comercial</li>
+      </ol>
+   </nav>
+
    <div class="barra-de-pesquisa">
       <h2>Comercial</h2>
 
@@ -42,7 +49,7 @@
 
             <div class="col-md-4">
                <label class="form-label">CNPJ da empresa</label><br>
-               <input type="text" class="form-control" name="cnpjDaEmpresa" id="cnpjDaEmpresa" required>
+               <input type="text" class="form-control" name="cnpjdaempresa" id="cnpjdaempresa" required>
             </div>
 
             <div class="col-md-4">
@@ -52,12 +59,12 @@
 
             <div class="col-md-4">
                <label class="form-label">Telefone da empresa</label><br>
-               <input type="number" class="form-control" name="telefoneEmpresa" id="telefoneEmpresa" required>
+               <input type="text" class="form-control" name="telefoneEmpresa" id="telefoneEmpresa" required>
             </div>
 
             <div class="col-md-4">
                <label class="form-label">Email da empresa</label><br>
-               <input type="email" class="form-control" name="emailEmpresa" id="emailEmpresa" required>
+               <input type="text" class="form-control" name="emailEmpresa" id="emailEmpresa" required>
             </div>
 
             <div class="col-md-4">
@@ -76,18 +83,13 @@
             </div>
 
             <div class="col-md-4">
-               <label class="form-label">Telefone do pagador</label><br>
-               <input type="number" class="form-control" name="telefonePagador" id="telefonePagador" required>
-            </div>
-
-            <div class="col-md-4">
                <label class="form-label">Email do pagador</label><br>
-               <input type="email" class="form-control" name="emailPagador" id="emailPagador" required>
+               <input type="text" class="form-control" name="emailPagador" id="emailPagador" required>
             </div>
 
             <div class="col-md-4">
                <label class="form-label">Valor total</label><br>
-               <input type="number" class="form-control" name="valor" id="valor" required>
+               <input type="text" class="form-control" name="valor" id="valor" required>
             </div>
 
             <div class="col-md-4">
@@ -97,19 +99,18 @@
 
             <div class="col-md-4">
                <label class="form-label">Data de vencimento</label><br>
-               <input type="number" class="form-control" name="vencimento" id="vencimento" required>
+               <input type="text" class="form-control" name="vencimento" id="vencimento" required>
             </div>
-            
+
             <div class="col-md-4">
                <label class="form-label">Data de emissão</label><br>
-               <input type="number" class="form-control" name="data" id="data" required>
+               <input type="text" class="form-control" name="data" id="data" required>
             </div>
 
             <div class="col-md-4">
                <label class="form-label">Código da fatura</label><br>
                <input type="text" class="form-control" name="codigoFatura" id="codigoFatura" required>
             </div>
-
 
             <div class="col-md-12">
                <button class="btn btn-light btn-pdf" id="getPDF">Gerar Documento</button>
@@ -118,25 +119,34 @@
       </div>
    </div>
 
-   
-   <div class="resultado"  id="resultado">
+
+   <div class="resultado" id="resultado">
 
       <h3>Fatura</h3>
       <br>
-      
-      <p id="texto-doc2">A empresa <a id="res_empresa"></a> localizada em <a id="res_enderecoEmpresa"></a> vem por meio desta nota outorgar a fatura para: <a id="res_pagador"></a>
-      possuinte do CPF/CNPJ(<a id="cpfCnpjDoPagador"></a>) no valor de <a id="res_valor"></a> emitida no dia (<a id="res_data"></a>)
-      com vencimento em (<a id="res_vencimento"></a>). Para mais informações, entre em contato conosco, nosso telefone é: <a id="res_telefoneEmpresa"></a>. Endereço de email: <a id="res_emailEmpresa"></a>.
-      
-      <br>
-      Descrição da fatura: <a id="res_descricao"></a>
-      <br>Código da fatura: <a id="res_codigoFatura"></a>
-      <br> Efetue o pagamento nas datas combinadas para evitar aplicações de juros.
+
+      <p id="texto-doc2">A empresa <a id="res_empresa"></a>, CNPJ <a id="cnpjdaempresa"></a>, localizada no endereço <a id="res_enderecoEmpresa"></a>, vem por meio desta nota outorgar a fatura para: <a id="res_pagador"></a>, possuinte do CPF/CNPJ <a id="cpfCnpjDoPagador"></a> no valor de R$ <a id="res_valor"></a>, emitida no dia <a id="res_data"></a> com vencimento em <a id="res_vencimento"></a>.
+
+         <br>
+         <br>
+         Para mais informações, entre em contato conosco no telefone <a id="res_telefoneEmpresa"></a>.
+         <br>
+         <br>
+         Endereço de email: <a id="res_emailEmpresa"></a>.
+         <br>
+         <br>
+         Descrição da fatura: <a id="res_descricao"></a>
+         <br>
+         <br>
+         Código da fatura: <a id="res_codigoFatura"></a>
+         <br>
+         <br>
+         Efetue o pagamento nas datas combinadas para evitar aplicações de juros.
       </p>
-      
+
    </div>
    <br>
-   
+
    <script>
       $('.forms2 input[name]').each(function () {
          let input = $(this)
@@ -192,63 +202,55 @@
    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script>
 
-   $(document).ready(function () {
-      $(".btn-pdf").click(function () {
-         let empresa = $("#empresa").val();
-         let cnpjDaEmpresa = $("#cnpjDaEmpresa").val();
-         let enderecoEmpresa = $("#enderecoEmpresa").val();
-         let telefoneEmpresa = $("#telefoneEmpresa").val();
-         let emailEmpresa = $("#emailEmpresa").val();
-         let pagador = $("#pagador").val();
-         let cpfCnpjDoPagador = $("#cpfCnpjDoPagador").val();
-         let enderecoDoPagador = $("#enderecoDoPagador").val();
-         let telefonePagador= $("#telefonePagador").val();
-         let emailPagador = $("#emailPagador").val();
-         let valor = $("#valor").val();
-         let descricao = $("#descricao").val();
-         let vencimento = $("#vencimento").val();
-         let data = $("#data").val();
-         let codigoFatura= $("#codigoFatura").val();
+$(document).ready(function () {
+   $(".btn-pdf").click(function () {
+      let empresa = $("#empresa").val();
+      let cnpjDaEmpresa = $("#cnpjdaempresa").val();
+      let enderecoEmpresa = $("#enderecoEmpresa").val();
+      let telefoneEmpresa = $("#telefoneEmpresa").val();
+      let emailEmpresa = $("#emailEmpresa").val();
+      let pagador = $("#pagador").val();
+      let cpfCnpjDoPagador = $("#cpfCnpjDoPagador").val();
+      let enderecoDoPagador = $("#enderecoDoPagador").val();
+      let emailPagador = $("#emailPagador").val();
+      let valor = $("#valor").val();
+      let descricao = $("#descricao").val();
+      let vencimento = $("#vencimento").val();
+      let data = $("#data").val();
+      let codigoFatura = $("#codigoFatura").val();
 
-         if (empresa !== '' && cnpjDaEmpresa != '' && enderecoEmpresa != '' && telefoneEmpresa != '' && emailEmpresa != '' && pagador != '' && cpfCnpjDoPagador != '' && enderecoDoPagador !== '' && telefonePagador != '' && emailPagador != '' && valor != '' && descricao != '' && vencimento != '' && data != '' && codigoFatura != '') {
-            $("#form_empresa").text($("#empresa").val());
-            $("#form_cnpjDaEmpresa").text($("#cnpjDaEmpresa").val());
-            $("#form_enderecoEmpresa").text($("#enderecoEmpresa").val());
-            $("#form_telefoneEmpresa").text($("#telefoneEmpresa").val());
-            $("#form_emailEmpresa").text($("#emailEmpresa").val());
-            $("#form_pagador").text($("#pagador").val());
-            $("#form_cpfCnpjDoPagador").text($("#cpfCnpjDoPagador").val());
-            $("#form_enderecoDoPagador").text($("#enderecoDoPagador").val());
-            $("#form_telefonePagador").text($("#telefonePagador").val());
-            $("#form_emailPagador").text($("#emailPagador").val());
-            $("#form_valor").text($("#valor").val());
-            $("#form_descricao").text($("#descricao").val());
-            $("#form_vencimento").text($("#vencimento").val());
-            $("#form_data").text($("#data").val());
-            $("#form_codigoFatura").text($("#codigoFatura").val());
-            var element = document.getElementById('resultado');
-                  
-                  var opt = {
-                     margin: 1,
-                     filename: 'contratocomercial.pdf',
-                     image: { type: 'jpeg', quality: 0.98 },
-                     html2canvas: { scale: 2 },
-                     jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
-                  };
-      
-                  // New Promise-based usage:
-                  html2pdf().set(opt).from(element).save();
-      
-                  // Old monolithic-style usage:
-                  html2pdf(element, opt);
-               }
-               else 
-               {
-                  alert("Ops! Algum campo ficou em branco! Preencha todo o formulário.")
-               }
-            })
-         });
+      if (empresa !== '' && cnpjdaempresa != '' && enderecoEmpresa != '' && telefoneEmpresa != '' && emailEmpresa != '' && pagador != '' && cpfCnpjDoPagador != '' && enderecoDoPagador !== '' && emailPagador != '' && valor != '' && descricao != '' && vencimento != '' && data != '' && codigoFatura != '') {
+         $("#form_empresa").text($("#empresa").val());
+         $("#form_cnpjdaempresa").text($("#cnpjdaempresa").val());
+         $("#form_enderecoEmpresa").text($("#enderecoEmpresa").val());
+         $("#form_telefoneEmpresa").text($("#telefoneEmpresa").val());
+         $("#form_emailEmpresa").text($("#emailEmpresa").val());
+         $("#form_pagador").text($("#pagador").val());
+         $("#form_cpfCnpjDoPagador").text($("#cpfCnpjDoPagador").val());
+         $("#form_enderecoDoPagador").text($("#enderecoDoPagador").val());
+         $("#form_emailPagador").text($("#emailPagador").val());
+         $("#form_valor").text($("#valor").val());
+         $("#form_descricao").text($("#descricao").val());
+         $("#form_vencimento").text($("#vencimento").val());
+         $("#form_data").text($("#data").val());
+         $("#form_codigoFatura").text($("#codigoFatura").val());
 
+         var html = document.getElementById('resultado').innerHTML;
+         var divContents = $("#dvContainer").html()
+         var win = window.open('', 'Contrato', 'height=400,width=800')
+         win.document.write('<html><head>')
+         win.document.write('<link rel="stylesheet" href="style.css"></head>')
+         win.document.write('<body class="print" onload="print()"><div style="height:400px;">')
+         win.document.write(html)
+         win.document.write('</div>')
+         win.document.write('</body></html>')
+         win.document.close()
+      }
+      else {
+         alert("Ops! Algum campo ficou em branco! Preencha todo o formulário.")
+      }
+   })
+});
 </script>
 
 </html>
