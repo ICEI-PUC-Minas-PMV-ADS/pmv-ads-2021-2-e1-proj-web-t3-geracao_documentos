@@ -16,6 +16,17 @@ body
   padding: 0px;
 }
 
+body.print 
+{
+  background: none !important;
+}
+
+.breadcrumb
+{
+  margin-left: 50px;
+  margin-top: 40px;
+}
+
 section img
 {
   display: block;
