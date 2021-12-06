@@ -125,7 +125,7 @@
       <h3>Fatura</h3>
       <br>
 
-      <p id="texto-doc2">A empresa <a id="res_empresa"></a>, CNPJ <a id="cnpjdaempresa"></a>, localizada no endereço <a id="res_enderecoEmpresa"></a>, vem por meio desta nota outorgar a fatura para: <a id="res_pagador"></a>, possuinte do CPF/CNPJ <a id="cpfCnpjDoPagador"></a> no valor de R$ <a id="res_valor"></a>, emitida no dia <a id="res_data"></a> com vencimento em <a id="res_vencimento"></a>.
+      <p id="texto-doc2">A empresa <a id="res_empresa"></a>, CNPJ<a id="res_cnpjdaempresa"></a>, localizada no endereço <a id="res_enderecoEmpresa"></a>, vem por meio desta nota outorgar a fatura para: <a id="res_pagador"></a>, possuinte do CPF/CNPJ <a id="cpfCnpjDoPagador"></a> no valor de R$ <a id="res_valor"></a>, emitida no dia <a id="res_data"></a> com vencimento em <a id="res_vencimento"></a>.
 
          <br>
          <br>
@@ -205,7 +205,7 @@
 $(document).ready(function () {
    $(".btn-pdf").click(function () {
       let empresa = $("#empresa").val();
-      let cnpjDaEmpresa = $("#cnpjdaempresa").val();
+      let cnpjdaEmpresa = $("#cnpjdaempresa").val();
       let enderecoEmpresa = $("#enderecoEmpresa").val();
       let telefoneEmpresa = $("#telefoneEmpresa").val();
       let emailEmpresa = $("#emailEmpresa").val();
@@ -223,15 +223,15 @@ $(document).ready(function () {
          $("#form_empresa").text($("#empresa").val());
          $("#form_cnpjdaempresa").text($("#cnpjdaempresa").val());
          $("#form_enderecoEmpresa").text($("#enderecoEmpresa").val());
-         $("#form_telefoneEmpresa").text($("#telefoneEmpresa").val());
+         $("#form_telefoneEmpresa").number($("#telefoneEmpresa").val());
          $("#form_emailEmpresa").text($("#emailEmpresa").val());
          $("#form_pagador").text($("#pagador").val());
-         $("#form_cpfCnpjDoPagador").text($("#cpfCnpjDoPagador").val());
+         $("#form_cpfCnpjDoPagador").number($("#cpfCnpjDoPagador").val());
          $("#form_enderecoDoPagador").text($("#enderecoDoPagador").val());
          $("#form_emailPagador").text($("#emailPagador").val());
-         $("#form_valor").text($("#valor").val());
+         $("#form_valor").number($("#valor").val());
          $("#form_descricao").text($("#descricao").val());
-         $("#form_vencimento").text($("#vencimento").val());
+         $("#form_vencimento").number($("#vencimento").val());
          $("#form_data").text($("#data").val());
          $("#form_codigoFatura").text($("#codigoFatura").val());
 
