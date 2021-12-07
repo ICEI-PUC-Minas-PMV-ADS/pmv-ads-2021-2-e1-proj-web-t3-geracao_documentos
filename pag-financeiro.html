@@ -43,7 +43,7 @@
 
             <div class="col-md-4">
                <label class="form-label">CPF do Vendedor</label><br>
-               <input type="text" class="form-control" name="cpfvendedor" id="cpfvendedo" required>
+               <input type="text" class="form-control" name="cpfvendedor" id="cpfvendedor" required>
             </div>
 
             <div class="col-md-4">
@@ -173,7 +173,7 @@
       $(document).ready(function () {
          $(".btn-pdf").click(function () {
             let vendedor = $("#vendedor").val();
-            let cpfvendedo = $("#cpfvendedo").val();
+            let cpfvendedo = $("#cpfvendedor").val();
             let cliente = $("#cliente").val();
             let cpfcliente = $("#cpfcliente").val();
             let rs = $("#rs").val();
@@ -184,7 +184,7 @@
 
             if (vendedor !== '' && cpfvendedo != '' && cliente != '' && cpfcliente != '' && rs != '' && rs_puro != '' && servico != '' && local !== '' && data != '') {
                $("#form_vendedor").text($("#vendedor").val());
-               $("#form_cpfvendedo").text($("#cpfvendedo").val());
+               $("#form_cpfvendedo").text($("#cpfvendedor").val());
                $("#form_cliente").text($("#cliente").val());
                $("#form_cpfcliente").text($("#cpfcliente").val());
                $("#form_rs").text($("#rs").val());
