@@ -45,12 +45,12 @@ RF07|O site deve possibilitar a edição/geração de proposta para aquisição 
 RF08|O site deve possibilitar a edição/geração de contratos de compra e venda de bens materiais | Alta | 
 RF09|O site deve apresentar na página principal as categorias de documentos (ex: Documentos Jurídicos, Documentos Administrativos, Documentos Comerciais). | Alta | 
 RF10|O site deve permitir ao usuário visualizar o conteúdo do documento, ao mesmo tempo em que edita as informações nos campos destacados. | Alta | 
-RF11|O site deve oferecer uma funcionalidade de filtro/pesquisa para permitir ao usuário localizar um modelo de contrato específico  | Alta | 
+RF11|O site deve oferecer uma funcionalidade de filtro/pesquisa para permitir ao usuário localizar um modelo de contrato específico  | Baixa | 
 RF12|O site deve apresentar, para cada categoria de documento, uma imagem e/ou cor específica |Média| 
 RF13|O site deve possibilitar, para cada categoria de documento, uma ideia de template pronto para ser criado.|Alta|
-RF14|O site deve possibilitar a opção de corrigir documentos concluídos. |Alta| 
+RF14|O site deve possibilitar a opção de corrigir documentos concluídos. |Baixa| 
 RF15|O site deve possibilitar o preenchimento dos campos para edição dos documentos |Alta|
-RF16|O site deve possibilitar a geração do documento no formato PDF |Alta|
+RF16|O site deve possibilitar a geração do documento no formato PDF ou impressão do mesmo |Alta|
 RF17|O site deve informar ao usuário se faltaram campos a serem preenchidos |Alta|
 
 ### Requisitos não Funcionais
@@ -59,11 +59,11 @@ A tabela a seguir apresenta os requisitos não funcionais que o projeto deverá 
 
 ID | Descrição | Prioridade |
 --- | --- | --- | 
-RNF01 | O site deve ter integração com sites/sistemas de assinatura eletrônica (ex: Authentique, Clicksign) | Alta | 
-RNF02 | O site deverá ser responsivo, permitindo a visualização em dispositivos móveis | Alta | 
+RNF01 | O site deve ter integração com sites/sistemas de assinatura eletrônica (ex: Authentique, Clicksign) | Baixa | 
+RNF02 | O site deverá ser responsivo, permitindo a visualização em dispositivos móveis | Baixa | 
 RNF03 | O site deve ter navegação simples e intuitiva | Alta | 
 RNF04 | O site deve ser compatível com os principais navegadores do mercado (Google Chrome, Opera, Firefox, Microsoft Edge) | Alta | 
-RNF05 | O sistema deve ter um banco de dados robusto, que não permita travamentos por excesso de arquivos armazenados | Alta | 
+RNF05 | O sistema deve ter um banco de dados robusto, que não permita travamentos por excesso de arquivos armazenados | Baixa | 
 
 ## Restrições
 
